@@ -1,5 +1,8 @@
+"use client"
+
 import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import style from './NavigationUnit.module.css';
 
 type Props = {
@@ -9,9 +12,11 @@ type Props = {
 }
 
 export default function NavigationUnit({ path, name, img }: Props) {
-  // TODO: useRouterでコンポーネント全体にアンカーを有効化する
+  const router = useRouter();
+
   return (
-    <div className={style.container}>
+    <div className={style.container} onClick={() => router.push(path)}>
+      {/* TODO: Linkを削除する */}
       <Link href={path} className={style.link}>
         <Image 
           src={img}
