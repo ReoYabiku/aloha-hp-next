@@ -1,0 +1,40 @@
+.first_view {
+    position: relative;
+    height: 523px;
+}
+
+.image {
+    position: absolute;
+    left: calc(50vw - 720px);
+}
+
+.triangle1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 0;
+    width: 0;
+    border-top: 210px solid var(--color-main);
+    border-right: 617px solid transparent;
+}
+
+.triangle2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    height: 0;
+    width: 0;
+    border-bottom: 373px solid var(--color-main);
+    border-left: 425px solid transparent;
+}
+
+.copy {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+
+    font-size: 60px;
+    color: var(--color-white);
+}

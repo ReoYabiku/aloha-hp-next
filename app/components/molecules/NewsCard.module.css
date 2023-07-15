@@ -1,0 +1,50 @@
+.card {
+    position: absolute;
+    /* top: 20px;
+    left: 20px; */
+
+    height: 186px;
+    width: 465px;
+    background-color: var(--color-white);
+    position: relative;
+}
+
+.top {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    width: calc(100% - 20px);
+    height: 7px;
+    background-color: var(--color-main);
+}
+
+.content {
+    position: absolute;
+    top: 17px;
+    left: 10px;
+
+    width: calc(100% - 20px);
+    height: 100px;
+    background-color: var(--color-white);
+
+    color: var(--color-main);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.bottom {
+    position: absolute;
+    top: 117px;
+    left: 10px;
+
+    width: calc(100% - 20px);
+    height: 60px;
+    background-color: var(--color-main);
+
+    color: var(--color-white);
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+}
