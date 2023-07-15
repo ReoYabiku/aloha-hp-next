@@ -1,10 +1,16 @@
 import style from './FirstView.module.css';
 import NewsCard from '../molecules/NewsCard';
+import Image from 'next/image';
+import firstViewPic from './first_view.png';
 
 const FirstView = () => {
 	return (
 		<section className={style.first_view}>
-			<img className={style.image} src="./first_view.png" alt="安田講堂" />
+			<Image
+				className={style.image}
+				src={firstViewPic}
+				alt="安田講堂"
+			/>
 
 			{/* 三角形 */}
 			<div className={style.triangle1}></div>
