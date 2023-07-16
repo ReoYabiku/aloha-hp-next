@@ -4,6 +4,7 @@
 	border: 3px solid var(--color-main);
 	border-radius: 10px;
 	margin-bottom: 30px;
+	cursor: pointer;
 }
 
 .text {

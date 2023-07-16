@@ -3,21 +3,28 @@ import style from './Main.module.css';
 
 type TextCartProps = {
   text: string
+  path: string
 }
 
 export default function Main() {
+
+  // TODO: 各活動に合わせて#以降を記載する
   const textCards: TextCartProps[] = [
     {
-      text: "出張講演会"
+      text: "出張講演会",
+      path: "/activities#"
     },
     {
-      text: "東大ツアー"
+      text: "東大ツアー",
+      path: "/activities#"
     },
     {
-      text: "東大生交流会"
+      text: "東大生交流会",
+      path: "/activities#"
     },
     {
-      text: "勉強合宿"
+      text: "勉強合宿",
+      path: "/activities#"
     }
   ]
 
@@ -29,6 +36,7 @@ export default function Main() {
           textCards.map((textCard) => (
             <TextCard
               text={textCard.text}
+              path={textCard.path}
             />
           ))
         }
