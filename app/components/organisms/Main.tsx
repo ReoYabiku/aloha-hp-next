@@ -35,6 +35,7 @@ export default function Main() {
         {
           textCards.map((textCard) => (
             <TextCard
+              key={textCard.text}
               text={textCard.text}
               path={textCard.path}
             />
