@@ -1,7 +1,7 @@
 import style from './FirstView.module.css';
 import NewsCard from '../molecules/NewsCard';
 import Image from 'next/image';
-import firstViewPic from './first_view.png';
+import firstViewPic from './first_view.jpg';
 
 const FirstView = () => {
 	return (
