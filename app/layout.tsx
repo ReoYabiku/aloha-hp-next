@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Header from './components/organisms/Header'
 import { Inter } from 'next/font/google'
 import Footer from './components/organisms/Footer'
+import CopyRight from './components/organisms/CopyRight'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <CopyRight />
       </body>
     </html>
   )
