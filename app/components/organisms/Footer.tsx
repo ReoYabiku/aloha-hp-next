@@ -78,8 +78,9 @@ export default function Footer() {
       <GroupInfo />
       <div className={style.pageInfo}>
         {
-          pageInfos.map((pageinfo) => (
+          pageInfos.map((pageinfo, id) => (
             <PageInfo
+              key={id}
               title={pageinfo.title}
               page1={pageinfo.page1}
               page2={pageinfo.page2}
