@@ -39,11 +39,12 @@
 	width: 50%;
 	display: flex;
 	justify-content: space-evenly;
-	margin-top: 15px;
+	margin-top: 18px;
 }
 
 .other_pages {
 	margin: 0;
+	padding-top: 3px;
 	width: 25%;
 	height: 30px;
 	display: flex;

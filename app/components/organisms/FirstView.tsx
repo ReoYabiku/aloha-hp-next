@@ -30,10 +30,8 @@ const FirstView = () => {
 				message3='参加申し込みはこちら ▶︎'
 			/>
 
-			<h2 className={style.copy}>
-				沖縄から東大を、<br />
-				日常に
-			</h2>
+			<h2 className={style.copy1}>沖縄から東大を、</h2>
+			<h2 className={style.copy2}>日常に</h2>
 
 			<div className={style.border}></div>
 
