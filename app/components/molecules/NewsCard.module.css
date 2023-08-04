@@ -1,7 +1,7 @@
 .card {
 	position: absolute;
-	/* top: 20px;
-	left: 20px; */
+	top: 20px;
+	left: 20px;
 
 	height: 186px;
 	width: 465px;
@@ -47,4 +47,34 @@
 	font-weight: bold;
 	font-size: 20px;
 	line-height: 20px;
+}
+
+@media screen and (max-width: 480px) {
+	.card {
+		top: 390px;
+		left: 30px;
+
+		height: 100px;
+		width: 220px;
+		z-index: 10;
+	}
+
+	.top {
+		height: 4px;
+	}
+
+	.content {
+		line-height: 10px;
+		height: 30px;
+	}
+
+	.text {
+		font-size: 10px;
+		margin: 7px auto;
+	}
+
+	.bottom {
+		top: 60px;
+		height: 30px;
+	}
 }
