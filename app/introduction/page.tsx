@@ -1,3 +1,3 @@
 export default function Introduction() {
-  return <h1>[Introduction Page]</h1>;
+  return <h1>[団体紹介]</h1>;
 }
