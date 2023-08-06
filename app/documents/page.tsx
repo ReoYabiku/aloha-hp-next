@@ -1,3 +1,3 @@
 export default function Documents() {
-  return <h1>[Documents Page]</h1>;
+  return <h1>[資料一覧]</h1>;
 }
