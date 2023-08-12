@@ -6,6 +6,7 @@
 
 .backgroundGreen {
     position: relative;
+    background-color: var(--color-pale-main);
 
     height: 550px;
 }
@@ -32,9 +33,11 @@
 
 .text {
     position: absolute;
-    top: 120px;
-    left: 150px;
+    top: 130px;
+    left: 200px;
 
-    font-size: 18px;
-    width: 80%;
+    white-space: pre-wrap;
+
+    font-size: 16px;
+    width: 70%;
 }
