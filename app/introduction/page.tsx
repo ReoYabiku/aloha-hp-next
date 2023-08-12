@@ -1,3 +1,11 @@
+import Title from '../components/organisms/Title';
+import Content from '../components/organisms/Content';
+
 export default function Introduction() {
-  return <h1>[団体紹介]</h1>;
+  return (
+    <main>
+      <Title />
+      <Content />
+    </main>
+  );
 }

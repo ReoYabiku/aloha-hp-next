@@ -1,0 +1,40 @@
+.backgroudWhite {
+    position: relative;
+
+    height: 500px;
+}
+
+.backgroundGreen {
+    position: relative;
+
+    height: 550px;
+}
+
+.subtitle {
+    position: absolute;
+    top: 30px;
+    left: 150px;
+
+    font-size: 15px;
+    color: var(--color-main);
+    font-weight: bold;
+}
+
+.title {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.text {
+    position: absolute;
+    top: 120px;
+    left: 150px;
+
+    font-size: 18px;
+    width: 80%;
+}
