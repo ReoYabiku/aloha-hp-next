@@ -1,0 +1,32 @@
+.background {
+    position: relative;
+
+    background-color: var(--color-pale-main);
+    height: 450px;
+}
+
+.subtitle {
+    position: absolute;
+    top: 160px;
+    left: 150px;
+    
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.title {
+    position: absolute;
+    top: 170px;
+    left: 150px;
+
+    font-size: 70px;
+    color: var(--color-main);
+}
+
+.description {
+    position: absolute;
+    top: 320px;
+    left: 150px;
+
+    font-size: 15px;
+}
