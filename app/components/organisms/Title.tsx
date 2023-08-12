@@ -1,11 +1,17 @@
 import style from './Title.module.css';
 
-export default function Title() {
+type TitleProps = {
+  subtitle: string,
+  title: string,
+  description: string,
+}
+
+export default function Title({subtitle, title, description}: TitleProps) {
   return (
     <section className={style.background}>
-      <p className={style.subtitle}>団体紹介</p>
-      <h1 className={style.title}>Introduction</h1>
-      <h2 className={style.description}>ALOHAは、沖縄から難関大学を目指す高校生を応援する学生団体です。</h2>
+      <p className={style.subtitle}>{subtitle}</p>
+      <h1 className={style.title}>{title}</h1>
+      <h2 className={style.description}>{description}</h2>
     </section>
   );
 }
