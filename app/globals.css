@@ -21,12 +21,13 @@ code {
 :root {
   --color-black: #000000;
   --color-text: #666666;
-  --color-header-border: #AAAAAA;
+  --color-header-border: #BBBBBB;
   --color-main: #63C1C7;
   --color-pale-main: #ECF8F5;
   --color-white: #ffffff;
   --color-blue: #8ABEFA;
   --color-gray: #F6F6F6;
+  --color-border: #BBBBBB;
 }
 
 a {

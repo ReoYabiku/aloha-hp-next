@@ -1,7 +1,25 @@
 import Title from '../components/organisms/Title';
 import Content from '../components/organisms/Content';
+import ActivityPair, { ActivityCardProps } from './ActivitiPair';
+import gatheringPic from './gathering.png';
 
 export default function Introduction() {
+  const gathering: ActivityCardProps = {
+    image: gatheringPic,
+    alt: "高校生を前に、教壇で話すALOHAメンバー",
+    title: "東大生交流会",
+    text: "昭和薬科大学附属高にて、東大生交流会を行いました。東大紹介や受験体験談、クイズ大会を実施しました。",
+    position: "left"
+  }
+
+  const gathering2: ActivityCardProps = {
+    image: gatheringPic,
+    alt: "高校生を前に、教壇で話すALOHAメンバー",
+    title: "東大生交流会",
+    text: "昭和薬科大学附属高にて、東大生交流会を行いました。東大紹介や受験体験談、クイズ大会を実施しました。",
+    position: "right"
+  }
+
   return (
     <main>
       <Title
@@ -18,7 +36,15 @@ export default function Introduction() {
       </Content>
 
       <Content subtitle='Activity' title='活動内容' isgreen={true}>
-        <p>hoge</p>
+        <ActivityPair
+          props1={gathering}
+          props2={gathering2}
+        />
+
+        <ActivityPair
+          props1={gathering}
+          props2={gathering2}
+        />
       </Content>
     </main>
   );
