@@ -2,6 +2,7 @@ import Image from 'next/image';
 import style from  './Body.module.css';
 import GatheringPic from './東大生交流会 1.png';
 import { StaticImageData } from 'next/image';
+import ActivityUnit from './ActivityUnit';
 
 type ActivityProps = {
     name: string
@@ -54,27 +55,17 @@ export default function Activities() {
         <section className={style.background}>
             {
                 activityDetails.map((props) => (
-                    <div>
-                        <div className={style.container}>
-                            <Image
-                                src={props.img}
-                                width={376}
-                                height={299}
-                                alt={props.name}
+                    <ActivityUnit
+                        key={props.name}
+                        name={props.name}
+                        description={props.description}
+                        img={props.img}
+                        last={props.last}
                             />
-                            <div className={style.child}>
-                                <h1 className={style.title}>{props.name}</h1>
-                                <p className={style.text}>
-                                    {props.description}
-                                </p>
-                            </div>
-                        </div>
-                        {props.last ? false : <div className={style.bar}/>}
-                    </div>
                 ))
             }
         </section>
-    )
+    );
 }
 
 {/*
