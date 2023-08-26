@@ -1,0 +1,29 @@
+.relative {
+    position: relative;
+
+    width: 238px;
+    height: 310px;
+    background-color: var(--color-white);
+
+    border: 1px solid #999999;
+    margin-top: 17px;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.name {
+    margin-top: 215px;
+    margin-left: 20px;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.affiliation {
+    font-size: 14px;
+    margin-left: 20px;
+}
