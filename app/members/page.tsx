@@ -25,7 +25,15 @@ export default function Members() {
       </Content>
 
       <Content subtitle='Members' title='メンバー紹介' isgreen={true}>
-        <p>content</p>
+        <div className={style.flexwrap}>
+          {
+            Array.from({length: 10}, (_, index) => (
+              <Person
+                key={index}
+              />
+            ))
+          }
+        </div>
       </Content>
     </main>
   );
