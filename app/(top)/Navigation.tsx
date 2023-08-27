@@ -1,8 +1,8 @@
-import NavigationUnit from '../molecules/NavigationUnit';
-import introductionPic from './introduction.png';
-import membersPic from './members.png';
-import documentsPic from './documents.png';
-import activiriesPic from './activities.png';
+import NavigationUnit from './NavigationUnit';
+import introductionPic from './src/introduction.png';
+import membersPic from './src/members.png';
+import documentsPic from './src/documents.png';
+import activiriesPic from './src/activities.png';
 import { StaticImageData } from 'next/image';
 import style from './Navigation.module.css';
 

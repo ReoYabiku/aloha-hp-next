@@ -1,4 +1,4 @@
-import TextCard from '../molecules/TextCard';
+import TextCard from './TextCard';
 import style from './Main.module.css';
 
 type TextCartProps = {

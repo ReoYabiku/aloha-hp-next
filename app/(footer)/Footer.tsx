@@ -1,7 +1,7 @@
-import GroupInfo from '../molecules/GroupInfo';
+import GroupInfo from './GroupInfo';
 import style from './Footer.module.css';
-import PageInfo from '../molecules/PageInfo';
-import SiteMapCard from '../molecules/SiteMapCard';
+import PageInfo from './PageInfo';
+import SiteMapCard from './SiteMapCard';
 
 export default function Footer() {
   type Page= {
