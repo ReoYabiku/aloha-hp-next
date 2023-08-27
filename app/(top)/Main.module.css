@@ -12,3 +12,10 @@
 	width: 70%;
 	margin: auto 15%;
 }
+
+@media screen and (max-width: 700px) {
+	.head {
+		margin: 0 0 10px;
+		font-size: 28px;
+	}
+}
