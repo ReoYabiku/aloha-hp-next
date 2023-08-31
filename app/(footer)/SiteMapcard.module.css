@@ -19,3 +19,19 @@
     padding-top: 20px;
     padding-bottom: 30px;
 }
+
+@media screen and (max-width: 700px) {
+    .card {
+        margin: 35px auto;
+        width: 70%;
+        padding-top: 1px;
+        height: 220px;
+    }
+    .border {
+        margin: 20px;
+        height: 180px;
+    }
+    .list {
+        padding-bottom: 10px;
+    }
+}
