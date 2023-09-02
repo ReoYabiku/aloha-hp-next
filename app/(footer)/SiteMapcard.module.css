@@ -20,7 +20,7 @@
     padding-bottom: 30px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 480px) {
     .card {
         margin: 35px auto;
         width: 70%;
