@@ -24,10 +24,11 @@
     .card {
         margin: 35px auto 0;
         width: 340px;
-        padding-top: 1px;
-        height: 220px;
+        height: auto;
+        padding: 20px;
     }
     .border {
+        margin: 0;
         height: 180px;
     }
     .list {
@@ -39,10 +40,11 @@
     .card {
         margin: 35px auto 0;
         width: 70%;
-        padding-top: 1px;
-        height: 220px;
+        height: auto;
+        padding: 20px;
     }
     .border {
+        margin: 0;
         height: 180px;
     }
     .list {

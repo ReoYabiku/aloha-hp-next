@@ -22,7 +22,10 @@
     .container {
         width: 290px;
         margin: 0 auto;
-        padding-top: 1px;
+    }
+
+    .title {
+        margin-top: 0;
     }
 }
 
@@ -30,11 +33,11 @@
     .container {
         width: 60%;
         margin: 0 auto;
-        padding-top: 1px;
     }
 
     .title {
         font-size: 40px;
+        margin-top: 0;
     }
 
     .subtitle {
