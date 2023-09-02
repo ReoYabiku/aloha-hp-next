@@ -14,7 +14,7 @@
 	margin-right: 30px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 959px) {
 	.footer{
 		height: 800px;
 		display: block;

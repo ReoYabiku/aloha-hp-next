@@ -18,6 +18,14 @@
     font-size: 14px;
 }
 
+@media screen and (min-width: 481px) and (max-width: 959px) {
+    .container {
+        width: 290px;
+        margin: 0 auto;
+        padding-top: 1px;
+    }
+}
+
 @media screen and (max-width:480px) {
     .container {
         width: 60%;
