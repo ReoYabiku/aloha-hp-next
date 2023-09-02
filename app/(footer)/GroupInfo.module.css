@@ -11,6 +11,7 @@
 .subtitle {
     font-size: 20px;
     margin-top: 0;
+    word-break: keep-all;
 }
 
 .text {
