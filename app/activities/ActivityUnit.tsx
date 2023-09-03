@@ -25,8 +25,8 @@ export default function ActivityUnit({ name, description, img, imgSP, last }: Pr
                     className={style.imageSP}
                     src={imgSP}
                     alt={name}
-                    width={125}
-                    height={99}
+                    width={300}
+                    height={160}
                 />
                 <div className={style.child}>
                     <h1 className={style.title}>{name}</h1>
