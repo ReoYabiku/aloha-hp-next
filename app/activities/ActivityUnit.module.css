@@ -76,3 +76,40 @@
         width: 60%;
     }
 }
+
+/* if screen is too narrow, not show picture */
+@media screen and (max-width: 359px) {
+    .container {
+        margin: 30px auto;
+        display: block;
+        padding: 30px 0;
+        width: 90%;
+    }
+
+    .child {
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    .title {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .image {
+        display: none;
+    }
+
+    .imageSP {
+        display: none;
+    }
+
+    .bar {
+        width: 60%;
+    }
+}
