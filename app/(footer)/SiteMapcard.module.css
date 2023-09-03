@@ -19,3 +19,35 @@
     padding-top: 20px;
     padding-bottom: 30px;
 }
+
+@media screen and (min-width: 481px) and (max-width: 959px) {
+    .card {
+        margin: 35px auto 0;
+        width: 340px;
+        height: auto;
+        padding: 20px;
+    }
+    .border {
+        margin: 0;
+        height: 180px;
+    }
+    .list {
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        margin: 35px auto 0;
+        width: 70%;
+        height: auto;
+        padding: 20px;
+    }
+    .border {
+        margin: 0;
+        height: 180px;
+    }
+    .list {
+        padding-bottom: 10px;
+    }
+}

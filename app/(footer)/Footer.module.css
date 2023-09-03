@@ -13,3 +13,17 @@
 	width: 45%;
 	margin-right: 30px;
 }
+
+@media screen and (max-width: 959px) {
+	.footer{
+		height: auto;
+		padding-top: 30px;
+		padding-bottom: 35px;
+		display: block;
+	}
+
+	.pageInfo {
+		width: 80%;
+		margin: 0 auto;
+	}
+}
