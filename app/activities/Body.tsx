@@ -1,4 +1,5 @@
-import GatheringPic from './東大生交流会 1.png';
+import MeetupPic from './src/meetup.png';
+import MeetupSPPic from './src/meetup_sp.png';
 import { StaticImageData } from 'next/image';
 import ActivityUnit from './ActivityUnit';
 
@@ -6,6 +7,7 @@ type ActivityProps = {
     name: string
     description: JSX.Element
     img: StaticImageData
+    imgSP: StaticImageData
     last: boolean
 }
 
@@ -20,7 +22,8 @@ export default function Activities() {
                 見た目を整えるために、写真と同じ幅まで文章が埋まっていると、なお望ましい。<br/>
                 　このサムネイルをクリックするとイベントの詳細ページに遷移するので、興味を引きたい。
                 </>,
-            img: GatheringPic,
+            img: MeetupPic,
+            imgSP: MeetupSPPic,
             last: false,
         },
         {
@@ -32,7 +35,8 @@ export default function Activities() {
                 見た目を整えるために、写真と同じ幅まで文章が埋まっていると、なお望ましい。<br/>
                 　このサムネイルをクリックするとイベントの詳細ページに遷移するので、興味を引きたい。
                 </>,
-            img: GatheringPic,
+            img: MeetupPic,
+            imgSP: MeetupSPPic,
             last: false,
         },
         {
@@ -44,7 +48,8 @@ export default function Activities() {
                 見た目を整えるために、写真と同じ幅まで文章が埋まっていると、なお望ましい。<br/>
                 　このサムネイルをクリックするとイベントの詳細ページに遷移するので、興味を引きたい。
                 </>,
-            img: GatheringPic,
+            img: MeetupPic,
+            imgSP: MeetupSPPic,
             last: true,
         }
     ]
@@ -58,6 +63,7 @@ export default function Activities() {
                         name={props.name}
                         description={props.description}
                         img={props.img}
+                        imgSP={props.imgSP}
                         last={props.last}
                     />
                 ))
