@@ -40,3 +40,51 @@
 .text {
   margin-bottom: 0;
 }
+
+@media screen and (min-width: 481px) and (max-width: 959px) {
+  .flex {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .borderL {
+    padding: 20px;
+
+    border-right: none;
+    border-left: none;
+  }
+
+  .borderR {
+    padding: 20px;
+
+    border-right: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .flex {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .borderL {
+    padding: 25px 0;
+
+    border-right: none;
+    border-left: none;
+  }
+
+  .borderR {
+    padding: 25px 0;
+
+    border-right: none;
+  }
+
+  .contents {
+    padding-left: 20px;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+}
