@@ -1,4 +1,5 @@
 import MeetupPic from './src/meetup.png';
+import MeetupSPPic from './src/meetup_sp.png';
 import { StaticImageData } from 'next/image';
 import ActivityUnit from './ActivityUnit';
 
@@ -6,6 +7,7 @@ type ActivityProps = {
     name: string
     description: JSX.Element
     img: StaticImageData
+    imgSP: StaticImageData
     last: boolean
 }
 
@@ -21,6 +23,7 @@ export default function Activities() {
                 　このサムネイルをクリックするとイベントの詳細ページに遷移するので、興味を引きたい。
                 </>,
             img: MeetupPic,
+            imgSP: MeetupSPPic,
             last: false,
         },
         {
@@ -33,6 +36,7 @@ export default function Activities() {
                 　このサムネイルをクリックするとイベントの詳細ページに遷移するので、興味を引きたい。
                 </>,
             img: MeetupPic,
+            imgSP: MeetupSPPic,
             last: false,
         },
         {
@@ -45,6 +49,7 @@ export default function Activities() {
                 　このサムネイルをクリックするとイベントの詳細ページに遷移するので、興味を引きたい。
                 </>,
             img: MeetupPic,
+            imgSP: MeetupSPPic,
             last: true,
         }
     ]
@@ -58,6 +63,7 @@ export default function Activities() {
                         name={props.name}
                         description={props.description}
                         img={props.img}
+                        imgSP={props.imgSP}
                         last={props.last}
                     />
                 ))
