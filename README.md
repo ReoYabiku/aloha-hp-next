@@ -33,7 +33,8 @@ PRの例
 3. 管理者へのメンション
 
 [@ReoYabiku](https://github.com/ReoYabiku/)までレビューの依頼を出してください
-![良いPR](https://alohahp.s3.ap-northeast-1.amazonaws.com/readme/how_to_request_review.png)
+
+<image src="https://alohahp.s3.ap-northeast-1.amazonaws.com/readme/how_to_request_review.png" width="200">
 
 ## 「資料一覧」へのファイルの追加
 `/app/documents/page.tsx`ファイルを編集することで、ファイルを追加することができます。
