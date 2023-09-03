@@ -18,6 +18,10 @@
     font-size: 14px;
 }
 
+.sp_br {
+    display: none;
+}
+
 @media screen and (min-width: 481px) and (max-width: 959px) {
     .container {
         width: 290px;
@@ -42,5 +46,9 @@
 
     .subtitle {
         font-size: 18px;
+    }
+
+    .sp_br {
+        display: block;
     }
 }
