@@ -34,7 +34,7 @@ PRの例
 
 [@ReoYabiku](https://github.com/ReoYabiku/)までレビューの依頼を出してください
 
-<image src="https://alohahp.s3.ap-northeast-1.amazonaws.com/readme/how_to_request_review.png" width="200">
+<image src="https://alohahp.s3.ap-northeast-1.amazonaws.com/readme/how_to_request_review.png" width="300">
 
 ## 「資料一覧」へのファイルの追加
 `/app/documents/page.tsx`ファイルを編集することで、ファイルを追加することができます。
