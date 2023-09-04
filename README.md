@@ -1,34 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 学生団体ALOHA　HP
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## 開発の始め方
+1. リポジトリをクローンする
+```shell
+$ git clone git@github.com:ReoYabiku/aloha-hp-next.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. ローカル環境の整備
+```shell
+$ npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. ローカルホストの立ち上げ
+```shell
+$ npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## プルリクエストの作成
+1. 作業内容をプッシュする
+```shell
+$ git push origin sample_branch
+```
 
-## Learn More
+2. PRの作成
+以下の項目を記載してください
+- 変更内容の概略
+- 気になる箇所についての補足説明
 
-To learn more about Next.js, take a look at the following resources:
+PRの例
+![良いPR](https://alohahp.s3.ap-northeast-1.amazonaws.com/readme/good_pull_request.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. 管理者へのメンション
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+[@ReoYabiku](https://github.com/ReoYabiku/)までレビューの依頼を出してください
 
-## Deploy on Vercel
+<image src="https://alohahp.s3.ap-northeast-1.amazonaws.com/readme/how_to_request_review.png" width="300">
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 「資料一覧」へのファイルの追加
+`/app/documents/page.tsx`ファイルを編集することで、ファイルを追加することができます。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 事前準備
+1. google document形式ではなく、PDF形式で該当ファイルを「02_HPフォルダ」に保存する
+1. 【公開範囲設定】該当ファイルの公開範囲を「リンクを知っている全員」とする
+1. 【ファイルIDの取得】PDFファイルを閲覧したとき、URLからファイルIDを取得する
+```
+https://drive.google.com/file/d/<--- これがファイルID --->/view
+```
+
+### 各フィールドの説明
+| キー名 | 説明 | 値 |
+| --- | --- | --- |
+| title | ファイル名 | ファイル名を記載してください |
+| embedURL | 埋め込みのためのURL | 屋比久がAWS（クラウドサービス）上で管理しています<br>連絡をお願いします |
+| description | ファイルの説明 | ファイルの内容、ページ数など |
+| showURL | ファイル閲覧のためのURL | `https://drive.google.com/file/d/ファイルID/view` |
+| downloadURL | ダウンロードのためのURL | `https://drive.google.com/u/4/uc?id=ファイルID&export=download` |
