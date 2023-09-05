@@ -7,9 +7,9 @@ export default function Loading() {
       <h1 className={style.title}>資料一覧</h1>
       <div className={style.titleBar}></div>
       <Document
-        title="ファイル名"
-        embedURL="https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/loading.png"
-        description="説明文　　　　　　　　　　　　　　　　　　　　　　　　　　　"
+        title="--------"
+        embedURL="https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/black.png"
+        description="-------------"
         showURL="hogehoge"
         downloadURL="hogehoge"
         isLast={true}
