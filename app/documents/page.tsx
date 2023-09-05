@@ -5,6 +5,9 @@ import { PrismaClient } from '@prisma/client';
 export default async function Documents() {
   const prisma = new PrismaClient();
   const documents = await prisma.documents.findMany({
+    where: {
+      status: "PUBLIC",
+    },
     orderBy: {
       id: "asc",
     }
@@ -18,7 +21,7 @@ export default async function Documents() {
       {
         documents.map((doc, idx) => (
           <Document
-            key={doc.title}
+            key={doc.id}
             title={doc.title}
             embedURL={doc.embed_url}
             description={doc.description}

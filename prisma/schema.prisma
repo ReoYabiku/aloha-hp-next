@@ -8,17 +8,16 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
-model users {
-  id         Int       @id @default(autoincrement())
-  name       String?   @db.VarChar
-  created_at DateTime? @default(now()) @db.Timestamp(6)
-  updated_at DateTime? @default(now()) @db.Timestamp(6)
-}
-
 model documents {
   id                 Int    @id @default(autoincrement())
   title              String @db.VarChar
   embed_url          String @db.VarChar
   description        String @db.VarChar
   google_document_id String @db.VarChar
+  status             Status @default(PRIVATE)
+}
+
+enum Status {
+  PUBLIC
+  PRIVATE
 }
