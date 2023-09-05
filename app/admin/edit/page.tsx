@@ -1,22 +1,24 @@
 "use client"
 
 import { signOut, useSession } from "next-auth/react";
-import { redirect } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
 
 export default function Page() {
   const { status } = useSession();
-
-  console.log(status);
+  const router = useRouter();
 
   if (status == "authenticated") {
-    console.log("register")
     return (
       <>
-        <h1>Register</h1>
+        <h1>Edit</h1>
+        <button onClick={() => router.push("/admin/delete")}>Go to Delete Page</button>
+        <br />
         <button onClick={() => signOut()}>Sign out with Google</button>
       </>
     );
   }
 
-  redirect("/api/auth/signin");
+  if (status == "unauthenticated") {
+    redirect("/api/auth/signin");
+  }
 }
