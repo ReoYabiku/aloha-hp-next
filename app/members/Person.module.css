@@ -24,3 +24,16 @@
     margin-left: 20px;
     width: 80%;
 }
+
+@media screen and (max-width: 480px) {
+    .border {
+        margin: 0 auto 50px;
+        text-align: center;
+        width: 238px;
+    }
+
+    .card {
+        margin: -25px auto 0;
+        text-align: left;
+    }
+}
