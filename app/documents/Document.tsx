@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import style from './Document.module.css';
 
-export type DocumentProps = {
+type DocumentProps = {
   title: string,
   embedURL: string,
   description: string,
