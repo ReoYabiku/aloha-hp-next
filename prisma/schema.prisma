@@ -9,12 +9,14 @@ datasource db {
 }
 
 model documents {
-  id                 Int    @id @default(autoincrement())
-  title              String @db.VarChar
-  embed_url          String @db.VarChar
-  description        String @db.VarChar
-  google_document_id String @db.VarChar
-  status             Status @default(PRIVATE)
+  id                 Int      @id @default(autoincrement())
+  title              String   @db.VarChar
+  embed_url          String   @db.VarChar
+  description        String   @db.VarChar
+  google_document_id String   @db.VarChar
+  status             Status   @default(PRIVATE)
+  created_at         DateTime @default(now())
+  updated_at         DateTime @default(now())
 }
 
 enum Status {
