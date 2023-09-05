@@ -4,7 +4,11 @@ import { PrismaClient } from '@prisma/client';
 
 export default async function Documents() {
   const prisma = new PrismaClient();
-  const documents = await prisma.documents.findMany();
+  const documents = await prisma.documents.findMany({
+    orderBy: {
+      id: "asc",
+    }
+  });
   const docSize = documents.length;
 
   return (
