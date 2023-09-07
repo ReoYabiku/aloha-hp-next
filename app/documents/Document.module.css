@@ -41,3 +41,18 @@
     width: 50%;
     margin: 30px auto 0;
 }
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 70%;
+        display: block;
+    }
+
+    .description {
+        margin-top: 30px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+}
