@@ -1,56 +1,33 @@
-import Document, { DocumentProps } from './Document';
+import Document from './Document';
 import style from './page.module.css';
+import { PrismaClient } from '@prisma/client';
 
-export default function Documents() {
-  const documents: DocumentProps[] = [
-    {
-      title: "ファイル名",
-      embedURL: 'https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/sample_file.pdf',
-      description: '資料の説明。記載内容の概略や、使用目的等を記載する。全2ページ。',
-      showURL: 'https://drive.google.com/file/d/1o7pJKk4XC8Pp3kga414XIj5BmDrbVsaw/view',
-      downloadURL: 'https://drive.google.com/u/4/uc?id=1o7pJKk4XC8Pp3kga414XIj5BmDrbVsaw&export=download',
-      isLast: false,
+export default async function Documents() {
+  const prisma = new PrismaClient();
+  const documents = await prisma.documents.findMany({
+    where: {
+      status: "PUBLIC",
     },
-    {
-      title: "ファイル名",
-      embedURL: 'https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/sample_file.pdf',
-      description: '資料の説明。記載内容の概略や、使用目的等を記載する。全2ページ。',
-      showURL: 'https://drive.google.com/file/d/1o7pJKk4XC8Pp3kga414XIj5BmDrbVsaw/view',
-      downloadURL: 'https://drive.google.com/u/4/uc?id=1o7pJKk4XC8Pp3kga414XIj5BmDrbVsaw&export=download',
-      isLast: false,
-    },
-    {
-      title: "ファイル名",
-      embedURL: 'https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/sample_file.pdf',
-      description: '資料の説明。記載内容の概略や、使用目的等を記載する。全2ページ。',
-      showURL: 'https://drive.google.com/file/d/1o7pJKk4XC8Pp3kga414XIj5BmDrbVsaw/view',
-      downloadURL: 'https://drive.google.com/u/4/uc?id=1o7pJKk4XC8Pp3kga414XIj5BmDrbVsaw&export=download',
-      isLast: false,
-    },
-    {
-      title: "ファイル名",
-      embedURL: 'https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/sample_file.pdf',
-      description: '資料の説明。記載内容の概略や、使用目的等を記載する。全2ページ。',
-      showURL: 'https://drive.google.com/file/d/1o7pJKk4XC8Pp3kga414XIj5BmDrbVsaw/view',
-      downloadURL: 'https://drive.google.com/u/4/uc?id=1o7pJKk4XC8Pp3kga414XIj5BmDrbVsaw&export=download',
-      isLast: true,
+    orderBy: {
+      id: "asc",
     }
-  ];
+  });
+  const docSize = documents.length;
 
   return (
     <section>
       <h1 className={style.title}>資料一覧</h1>
       <div className={style.titleBar}></div>
       {
-        documents.map((props) => (
+        documents.map((doc, idx) => (
           <Document
-            key={props.title}
-            title={props.title}
-            embedURL={props.embedURL}
-            description={props.description}
-            showURL={props.showURL}
-            downloadURL={props.downloadURL}
-            isLast={props.isLast}
+            key={doc.id}
+            title={doc.title}
+            embedURL={doc.embed_url}
+            description={doc.description}
+            showURL={`https://drive.google.com/file/d/${doc.google_document_id}/view`}
+            downloadURL={`https://drive.google.com/u/4/uc?id=${doc.google_document_id}&export=download`}
+            isLast={idx == docSize - 1}
           />
         ))
       }
