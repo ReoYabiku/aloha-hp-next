@@ -1,20 +1,26 @@
 import Image from 'next/image';
-import SamplePersonPic from "./sample_person.png";
 import style from './Person.module.css';
 
-export default function Person() {
+type Member = {
+  name: string,
+  affiliation: string,
+  imageURL: string,
+};
+
+export default function Person({ name, affiliation, imageURL}: Member) {
   return (
     <div className={style.border}>
       <Image
-        src={SamplePersonPic}
-        height={201}
-        width={238}
+        src={imageURL}
+        height={200}
+        width={200}
         alt='フリー素材の顔写真'
+        style={{objectFit: "cover"}}
         className={style.image}
       />
       <div className={style.card}>
-        <h3 className={style.name}>伊礼漢</h3>
-        <p className={style.affiliation}>東京大学　経済学部　3年</p>
+        <h3 className={style.name}>{name}</h3>
+        <p className={style.affiliation}>{affiliation}</p>
       </div>
     </div>
   );
