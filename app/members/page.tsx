@@ -73,7 +73,7 @@ export default function Members() {
       <Content subtitle='Leader' title='代表挨拶' isgreen={false}>
         <div className={style.flex}>
           <Person
-            name='伊礼漢'
+            name='伊礼 漢'
             affiliation='東京大学 経済学部 三年'
             imageURL='https://alohahp.s3.ap-northeast-1.amazonaws.com/members/irei_kan.jpeg'
           />
