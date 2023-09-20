@@ -16,7 +16,7 @@ const handler = NextAuth({
       return false
     },
     async redirect() {
-      return "/admin/edit"
+      return "/admin/new"
     }
   }
 })

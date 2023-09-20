@@ -3,6 +3,7 @@
 import { signOut, useSession } from "next-auth/react";
 import { redirect, useRouter } from 'next/navigation';
 import { useState } from 'react';
+import NewDocument from './Documents';
 
 export default function Page() {
   const { status } = useSession();
@@ -33,13 +34,13 @@ export default function Page() {
             </select>
           </li>
           <li>
-            <h2>新規登録対象を選択してください</h2>
+            <h2>登録内容を記載してください</h2>
             {(() => {
               switch (selectedCategory) {
                 case "members":
                   return <p>メンバーの新規登録は未実装です</p>
                 case "documents":
-                  return <p>資料一覧の新規登録は未実装です</p>;
+                  return <NewDocument />;
                 case "activities":
                   return <p>活動実績の新規登録は未実装です</p>
                 default:

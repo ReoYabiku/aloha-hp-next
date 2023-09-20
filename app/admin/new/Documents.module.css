@@ -1,0 +1,26 @@
+.changeNum {
+    width: 100%;
+    background-color: var(--color-white);
+    border: none;
+    font-size: 18px;
+    line-height: 14px;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    margin-top: 30px;
+}
+
+.button {
+    width: 120px;
+    height: 50px;
+
+    font-size: 20px;
+}
+
+.done {
+    color: red;
+    line-height: 50px;
+    margin: 0 30px;
+}
