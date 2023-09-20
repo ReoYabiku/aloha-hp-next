@@ -1,10 +1,10 @@
-import '../globals.css'
+import './globals.css'
 import style from './layout.module.css'
 import type { Metadata } from 'next'
-import Header from '../(header)/Header'
+import Header from './(header)/Header'
 import { Inter } from 'next/font/google'
-import Footer from '../(footer)/Footer'
-import CopyRight from '../(footer)/CopyRight'
+import Footer from './(footer)/Footer'
+import CopyRight from './(footer)/CopyRight'
 import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] })
