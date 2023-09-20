@@ -20,8 +20,8 @@ export default function NewDocument() {
         </thead>
         <tbody>
           {
-            Array.from({length: newDocumentCount}).map(() => (
-              <tr>
+            Array.from({length: newDocumentCount}).map((_, idx) => (
+              <tr key={idx}>
                 <td><input type="text" size={30}/></td>
                 <td><input type="text" size={40} /></td>
                 <td><textarea name="" id="" cols={50} rows={6}></textarea></td>
