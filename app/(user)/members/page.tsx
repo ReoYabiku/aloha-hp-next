@@ -2,66 +2,26 @@ import Title from '../../components/organisms/Title';
 import Content from '../../components/organisms/Content';
 import Person from './Person';
 import style from './page.module.css';
+import { PrismaClient } from '@prisma/client';
 
-type Member = {
-  name: string,
-  affiliation: string,
-  imageURL: string,
-};
+export default async function Members() {
+  const prisma = new PrismaClient();
+  const leader = await prisma.members.findFirst({
+    where: {
+      status: "PUBLIC",
+      is_leader: true,
+    }
+  });
+  const members = await prisma.members.findMany({
+    where: {
+      status: "PUBLIC",
+      is_leader: false,
+    },
+    orderBy: {
+      id: "asc",
+    }
+  });
 
-export default function Members() {
-  const members: Member[] = [
-    {
-      name: "仲本 梨乃奈",
-      affiliation: "東京大学 理科二類 ２年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/nakamoto_rinona.jpeg",
-    },
-    {
-      name: "屋比久 怜央",
-      affiliation: "東京大学 工学部 ４年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/yabiku_reo.jpg",
-    },
-    {
-      name: "名嘉山 結月",
-      affiliation: "東京大学 文科二類 ２年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/nakayama_yuzuki.JPG",
-    },
-    {
-      name: "伊礼 理貴",
-      affiliation: "東京大学 理科一類 １年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/irei_riki.jpeg",
-    },
-    {
-      name: "當眞 嗣丈",
-      affiliation: "東京大学 理科一類 ２年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/touma_shijou.jpeg",
-    },
-    {
-      name: "友利 寧唯",
-      affiliation: "東京大学 文科一類 １年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/tomori_nei.jpg",
-    },
-    {
-      name: "前田 春樹",
-      affiliation: "東京大学 理科一類 １年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/maeda_haruki.jpeg",
-    },
-    {
-      name: "游 盈",
-      affiliation: "東京大学 教育学部 ４年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/you_ying.jpeg",
-    },
-    {
-      name: "新垣 梨穂",
-      affiliation: "東京大学 文学部 ４年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/arakaki_riho.jpg",
-    },
-    {
-      name: "大見謝 恒和",
-      affiliation: "東京大学 理科一類 ２年",
-      imageURL: "https://alohahp.s3.ap-northeast-1.amazonaws.com/members/omija_tsunekazu.jpg",
-    },
-  ];
   return (
     <main>
       <Title
@@ -70,13 +30,16 @@ export default function Members() {
         description='メンバー紹介に関するいい感じの文章。長めの文章にしたいけど書くことないから適当に引き伸ばしています。'
       />
 
+      
       <Content subtitle='Leader' title='代表挨拶' isgreen={false}>
         <div className={style.flex}>
-          <Person
-            name='伊礼 漢'
-            affiliation='東京大学 経済学部 三年'
-            imageURL='https://alohahp.s3.ap-northeast-1.amazonaws.com/members/irei_kan.jpeg'
-          />
+          {leader && (
+            <Person
+              name={leader.name}
+              affiliation={leader.affiliation}
+              imageURL={leader.image_url}
+            />
+          )}
           <div className={style.text}>
             <p>　「ではみなさんは、そういうふうに川だと云いわれたり、乳の流れたあとだと云われたりしていたこのぼんやりと白いものがほんとうは何かご承知ですか。」</p>
             <p>　先生は、黒板に吊つるした大きな黒い星座の図の、上から下へ白くけぶった銀河帯のようなところを指さしながら、みんなに問といをかけました。 </p>
@@ -85,16 +48,17 @@ export default function Members() {
           </div>
         </div>
       </Content>
+      
 
       <Content subtitle='Members' title='メンバー紹介' isgreen={true}>
         <div className={style.flexwrap}>
           {
-            members.map((member, index) => (
+            members.map((member) => (
               <Person
-                key={index}
+                key={member.id}
                 name={member.name}
                 affiliation={member.affiliation}
-                imageURL={member.imageURL}
+                imageURL={member.image_url}
               />
             ))
           }
