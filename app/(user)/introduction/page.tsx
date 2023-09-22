@@ -1,5 +1,5 @@
-import Title from '../components/organisms/Title';
-import Content from '../components/organisms/Content';
+import Title from '../../components/organisms/Title';
+import Content from '../../components/organisms/Content';
 import ActivityPair, { ActivityCardProps } from './ActivitiPair';
 import gatheringPic from './gathering.png';
 

@@ -1,5 +1,5 @@
-import Title from '../components/organisms/Title';
-import Content from '../components/organisms/Content';
+import Title from '../../components/organisms/Title';
+import Content from '../../components/organisms/Content';
 import Person from './Person';
 import style from './page.module.css';
 import { PrismaClient } from '@prisma/client';

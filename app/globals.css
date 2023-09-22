@@ -35,3 +35,15 @@ a {
   text-decoration: none;
   color: var(--color-black);
 }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+table,
+th,
+td {
+  padding: 5px;
+  border: 1px solid black;
+}

@@ -1,4 +1,4 @@
-import Title from '../components/organisms/Title';
+import Title from '../../components/organisms/Title';
 import Body from './Body';
 
 export default function Activities() {

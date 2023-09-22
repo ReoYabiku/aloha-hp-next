@@ -1,7 +1,7 @@
 import style from "./page.module.css";
-import FirstView from './(top)/FirstView';
-import Navigation from './(top)/Navigation';
-import Main from './(top)/Main';
+import FirstView from './(user)/(top)/FirstView';
+import Navigation from './(user)/(top)/Navigation';
+import Main from './(user)/(top)/Main';
 
 export default function Top() {
   return  (
