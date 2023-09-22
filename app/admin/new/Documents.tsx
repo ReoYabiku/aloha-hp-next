@@ -15,10 +15,14 @@ const emptyDocument: Document = {
   description: "",
   documentID: "",
 };
+type RegisterationStatus = 
+  | "succeeded" // 成功
+  | "failed"    // 失敗
+  | "loading"   // 処理中
+  | "none";     // 処理前
 export default function NewDocument() {
   const [newDocuments, setNewDocuments] = useState<Array<Document>>([emptyDocument]);
-  const [succeedRegister, setSucceedRegister] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [registerationStatus, setRegistrationStatus] = useState<RegisterationStatus>("none");
 
   return (
     <div>
@@ -34,7 +38,7 @@ export default function NewDocument() {
         <tbody>
           {
             Array.from({length: newDocuments.length}).map((_, idx) => (
-              <DocumentUnit key={idx} id={idx} set={setNewDocuments}/>
+              <DocumentUnit key={idx} id={idx} docs={newDocuments} set={setNewDocuments}/>
             ))
           }
           <RemoveRow setNewDocuments={setNewDocuments} />
@@ -44,25 +48,21 @@ export default function NewDocument() {
       <div className={style.flex}>
         <SaveButton
           documents={newDocuments}
-          setSucceedRegister={setSucceedRegister}
-          setLoading={setLoading}
+          setNewDocuments={setNewDocuments}
+          setRegistrationStatus={setRegistrationStatus}
         />
-        {
-          succeedRegister ?
-            <p className={style.done}>登録完了しました！</p>
-          : loading &&
-          <p className={style.done}>登録中...</p>
-        }
+        <RegistrationStatusText status={registerationStatus} />
       </div>
     </div>
   );
 }
 
 type DocumentUnitProps = {
-  id: number
-  set: React.Dispatch<React.SetStateAction<Document[]>>
+  id: number,
+  docs: Document[],
+  set: React.Dispatch<React.SetStateAction<Document[]>>,
 }
-function DocumentUnit({id, set}: DocumentUnitProps) {
+function DocumentUnit({id, docs, set}: DocumentUnitProps) {
   const handleChangeFor = (target: string) => (e: React.ChangeEvent<HTMLInputElement>)=>{
     set(docs => docs.map((doc, idx) => {
       if (idx == id) {
@@ -84,10 +84,18 @@ function DocumentUnit({id, set}: DocumentUnitProps) {
 
   return (
     <tr>
-      <td><input type="text" size={30} onChange={handleChangeFor("title")}/></td>
-      <td><input type="text" size={40} onChange={handleChangeFor("pdf")}/></td>
-      <td><textarea name="" id="" cols={50} rows={6} onChange={handleDescriptionChange}></textarea></td>
-      <td><input type="text" size={30} onChange={handleChangeFor("documentID")}/></td>
+      <td>
+        <input type="text" size={30} value={docs[id].title} onChange={handleChangeFor("title")}/>
+      </td>
+      <td>
+        <input type="text" size={40} value={docs[id].pdf} onChange={handleChangeFor("pdf")}/>
+      </td>
+      <td>
+        <textarea name="" id="" cols={50} rows={6} value={docs[id].description} onChange={handleDescriptionChange}></textarea>
+      </td>
+      <td>
+        <input type="text" size={30} value={docs[id].documentID} onChange={handleChangeFor("documentID")}/>
+      </td>
     </tr>
   );
 }
@@ -128,12 +136,12 @@ function AddRow({ setNewDocuments }: AddRowProps) {
 
 type SaveButtonProps = {
   documents: Document[],
-  setSucceedRegister: React.Dispatch<React.SetStateAction<boolean>>,
-  setLoading: React.Dispatch<React.SetStateAction<boolean>>,
+  setNewDocuments: React.Dispatch<React.SetStateAction<Document[]>>,
+  setRegistrationStatus: React.Dispatch<React.SetStateAction<RegisterationStatus>>,
 }
-function SaveButton({documents, setSucceedRegister, setLoading}: SaveButtonProps) {
+function SaveButton({documents, setNewDocuments, setRegistrationStatus }: SaveButtonProps) {
   const handleClick = async () => {
-    setLoading(true);
+    setRegistrationStatus("loading");
 
     const res = await fetch('/api/documents', {
       method: "POST",
@@ -141,13 +149,29 @@ function SaveButton({documents, setSucceedRegister, setLoading}: SaveButtonProps
       body: JSON.stringify(documents),
     }).then(res => res.json())
 
-    setLoading(false);
-
     if (res == documents.length) {
-      setSucceedRegister(true);
-      setTimeout(()=>setSucceedRegister(false), 1000);
+      setRegistrationStatus("succeeded")
+      setTimeout(()=>setRegistrationStatus("none"), 1000);
+
+      setNewDocuments([emptyDocument]);
     }
   };
 
   return <button className={style.button} onClick={handleClick}>登録</button>;
+}
+
+type RegistrationStatusProps = {
+  status: RegisterationStatus,
+};
+function RegistrationStatusText({ status }: RegistrationStatusProps) {
+  switch (status) {
+    case "succeeded":
+      return <p className={style.status}>登録完了しました！</p>
+    case "failed":
+      return <p className={style.status}>登録に失敗しました。</p>
+    case "loading":
+      return <p className={style.status}>登録中...</p>
+    case "none":
+      return
+  }
 }

@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { PrismaClient } from '@prisma/client';
-// TODO: type用のファイルを用意する
 import { Document } from '../../admin/new/Documents';
 
 export async function POST(request: Request) {
