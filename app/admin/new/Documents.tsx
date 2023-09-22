@@ -1,10 +1,9 @@
 "use client"
 
 import { useState } from 'react';
-import { PrismaClient } from '@prisma/client';
 import style from './Documents.module.css';
 
-type Document = {
+export type Document = {
   title: string,
   pdf: string,
   description: string,
@@ -20,8 +19,7 @@ export default function NewDocument() {
   };
   const [newDocuments, setNewDocuments] = useState<Array<Document>>([emptyDocument]);
   const [succeedRegister, setSucceedRegister] = useState<boolean>(false);
-
-  console.log(newDocuments);
+  const [loading, setLoading] = useState<boolean>(false);
 
   return (
     <div>
@@ -61,10 +59,16 @@ export default function NewDocument() {
         </tbody>
       </table>
       <div className={style.flex}>
-        <button className={style.button} onClick={()=>SaveDocuments(newDocuments, setSucceedRegister)}>登録</button>
+        <SaveButton
+          documents={newDocuments}
+          setSucceedRegister={setSucceedRegister}
+          setLoading={setLoading}
+        />
         {
-          succeedRegister &&
-          <p className={style.done}>登録完了しました！</p>
+          succeedRegister ?
+            <p className={style.done}>登録完了しました！</p>
+          : loading &&
+          <p className={style.done}>登録中...</p>
         }
       </div>
     </div>
@@ -106,17 +110,30 @@ function DocumentUnit({id, set}: DocumentUnitProps) {
   );
 }
 
-async function SaveDocuments(docs: Document[], setSucceedRegister: React.Dispatch<React.SetStateAction<boolean>>) {
-  const prisma = new PrismaClient();
-  const document = await prisma.documents.createMany({
-    data: docs.map((doc) => ({
-      title: doc.title,
-      embed_url: doc.pdf,
-      description: doc.description,
-      google_document_id: doc.documentID
-    }),
-    ),
-  })
-  setSucceedRegister(document !== null && document !== undefined);
-  setTimeout(()=>(setSucceedRegister(false)), 1000);
+type SaveButtonProps = {
+  documents: Document[],
+  setSucceedRegister: React.Dispatch<React.SetStateAction<boolean>>,
+  setLoading: React.Dispatch<React.SetStateAction<boolean>>,
+}
+function SaveButton({documents, setSucceedRegister, setLoading}: SaveButtonProps) {
+  const handleClick = async () => {
+    setLoading(true);
+
+    const res = await fetch('/api/documents', {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(documents),
+    }).then(res => res.json())
+
+    setLoading(false);
+
+    if (res == documents.length) {
+      setSucceedRegister(true);
+      setTimeout(()=>setSucceedRegister(false), 1000);
+    }
+  };
+
+  // TODO: 「登録完了」の通知方法を考える
+
+  return <button className={style.button} onClick={handleClick}>登録</button>;
 }
