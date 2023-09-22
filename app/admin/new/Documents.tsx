@@ -9,14 +9,13 @@ export type Document = {
   description: string,
   documentID: string,
 }
-
+const emptyDocument: Document = {
+  title: "",
+  pdf: "",
+  description: "",
+  documentID: "",
+};
 export default function NewDocument() {
-  const emptyDocument: Document = {
-    title: "",
-    pdf: "",
-    description: "",
-    documentID: "",
-  };
   const [newDocuments, setNewDocuments] = useState<Array<Document>>([emptyDocument]);
   const [succeedRegister, setSucceedRegister] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
@@ -38,24 +37,8 @@ export default function NewDocument() {
               <DocumentUnit key={idx} id={idx} set={setNewDocuments}/>
             ))
           }
-          <tr>
-            <td colSpan={4}>
-              <button
-                className={style.changeNum}
-                onClick={()=>setNewDocuments(docs => (
-                  docs.length == 1 ? [emptyDocument] : docs.slice(0, -1)
-                ))}
-              >-</button>
-            </td>
-          </tr>
-          <tr>
-            <td colSpan={4}>
-              <button
-                className={style.changeNum}
-                onClick={()=>setNewDocuments(docs => docs.concat(emptyDocument))}
-              >+</button>
-            </td>
-          </tr>
+          <RemoveRow setNewDocuments={setNewDocuments} />
+          <AddRow setNewDocuments={setNewDocuments} />
         </tbody>
       </table>
       <div className={style.flex}>
@@ -79,7 +62,6 @@ type DocumentUnitProps = {
   id: number
   set: React.Dispatch<React.SetStateAction<Document[]>>
 }
-
 function DocumentUnit({id, set}: DocumentUnitProps) {
   const handleChangeFor = (target: string) => (e: React.ChangeEvent<HTMLInputElement>)=>{
     set(docs => docs.map((doc, idx) => {
@@ -110,6 +92,40 @@ function DocumentUnit({id, set}: DocumentUnitProps) {
   );
 }
 
+type RemoveRowProps = {
+  setNewDocuments: React.Dispatch<React.SetStateAction<Document[]>>
+}
+function RemoveRow({ setNewDocuments }: RemoveRowProps) {
+  return (
+    <tr>
+      <td colSpan={4}>
+        <button
+          className={style.changeNum}
+          onClick={()=>setNewDocuments(docs => (
+            docs.length == 1 ? [emptyDocument] : docs.slice(0, -1)
+          ))}
+        >-</button>
+      </td>
+    </tr>
+  );
+}
+
+type AddRowProps = {
+  setNewDocuments: React.Dispatch<React.SetStateAction<Document[]>>
+}
+function AddRow({ setNewDocuments }: AddRowProps) {
+  return (
+    <tr>
+      <td colSpan={4}>
+        <button
+          className={style.changeNum}
+          onClick={()=>setNewDocuments(docs => docs.concat(emptyDocument))}
+        >+</button>
+      </td>
+    </tr>
+  );
+}
+
 type SaveButtonProps = {
   documents: Document[],
   setSucceedRegister: React.Dispatch<React.SetStateAction<boolean>>,
@@ -132,8 +148,6 @@ function SaveButton({documents, setSucceedRegister, setLoading}: SaveButtonProps
       setTimeout(()=>setSucceedRegister(false), 1000);
     }
   };
-
-  // TODO: 「登録完了」の通知方法を考える
 
   return <button className={style.button} onClick={handleClick}>登録</button>;
 }
