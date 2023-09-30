@@ -139,7 +139,7 @@ type SaveButtonProps = {
   setNewDocuments: React.Dispatch<React.SetStateAction<Document[]>>,
   setRegistrationStatus: React.Dispatch<React.SetStateAction<RegisterationStatus>>,
 }
-function SaveButton({documents, setNewDocuments, setRegistrationStatus }: SaveButtonProps) {
+function SaveButton({documents, setNewDocuments, setRegistrationStatus }: SaveButtonProps) {  // ここの処理を書き換える。
   const handleClick = async () => {
     setRegistrationStatus("loading");
 
@@ -147,7 +147,11 @@ function SaveButton({documents, setNewDocuments, setRegistrationStatus }: SaveBu
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(documents),
-    }).then(res => res.json())
+    }).then(res => {
+      console.log(res);
+      console.log(typeof res);
+      return res.json();
+    });
 
     if (res == documents.length) {
       setRegistrationStatus("succeeded")
