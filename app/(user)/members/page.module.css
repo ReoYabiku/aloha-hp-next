@@ -3,18 +3,45 @@
     justify-content: space-between;
 }
 
-.flexwrap {
+.spacebetween {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+    justify-content: space-between;
+}
+
+.flexleft3 {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 1*200px - 1*(100% - 800px)/3);
+}
+
+.flexleft2 {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 2*200px - 2*(100% - 800px)/3);
+}
+
+.flexleft1 {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 3*200px - 3*(100% - 800px)/3);
+}
+
+.flexleft0 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%
 }
 
 .text {
-    margin: -20px 0 0;
+    margin: -20px 0 0 50px;
 }
 
 @media screen and (max-width: 480px) {
-    .flex {
+    .flex, .spacebetween, .flexleft1, .flexleft2, .flexleft3 {
         display: block;
+    }
+
+    .text {
+        margin: -20px 0 0;
     }
 }

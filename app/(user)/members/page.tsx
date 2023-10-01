@@ -22,6 +22,9 @@ export default async function Members() {
     }
   });
 
+  const Nmember = members.length;
+  const NumPerRow = 4;
+
   return (
     <main>
       <Title
@@ -51,18 +54,35 @@ export default async function Members() {
       
 
       <Content subtitle='Members' title='メンバー紹介' isgreen={true}>
-        <div className={style.flexwrap}>
-          {
-            members.map((member) => (
-              <Person
-                key={member.id}
-                name={member.name}
-                affiliation={member.affiliation}
-                imageURL={member.image_url}
-              />
-            ))
-          }
-        </div>
+        {
+          [...Array(Nmember / NumPerRow + 1 | 0)].map((_, i) => i).map((row) => (
+            (row+1)*NumPerRow < Nmember ?
+            <div className={style.spacebetween}>
+              {
+                members.slice(NumPerRow*row, NumPerRow*(row+1)).map((member) => (
+                  <Person
+                    key={member.id}
+                    name={member.name}
+                    affiliation={member.affiliation}
+                    imageURL={member.image_url}
+                  />
+                ))
+              }
+            </div> :
+            <div className={style['flexleft'+Nmember%NumPerRow]}>
+              {
+                members.slice(NumPerRow*row, NumPerRow*(row+1)).map((member) => (
+                  <Person
+                    key={member.id}
+                    name={member.name}
+                    affiliation={member.affiliation}
+                    imageURL={member.image_url}
+                  />
+                ))
+              }
+            </div>
+          ))
+        }
       </Content>
     </main>
   );
