@@ -57,7 +57,7 @@ export default async function Members() {
         {
           [...Array(Nmember / NumPerRow + 1 | 0)].map((_, i) => i).map((row) => (
             (row+1)*NumPerRow < Nmember ?
-            <div className={style.spacebetween}>
+            <div className={style.spacebetween} key={row}>
               {
                 members.slice(NumPerRow*row, NumPerRow*(row+1)).map((member) => (
                   <Person
@@ -69,7 +69,7 @@ export default async function Members() {
                 ))
               }
             </div> :
-            <div className={style['flexleft'+Nmember%NumPerRow]}>
+            <div className={style['flexleft'+Nmember%NumPerRow]} key={row}>
               {
                 members.slice(NumPerRow*row, NumPerRow*(row+1)).map((member) => (
                   <Person
