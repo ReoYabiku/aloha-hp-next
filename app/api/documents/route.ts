@@ -19,12 +19,13 @@ async function SaveDocuments(docs: Document[]): Promise<number> {
   console.log(docs.length + " documents are found.")
   console.log('clients ready.')
 
-  docs.map((doc) => {
-    let pdfData = downloadDocument(doc.documentID);
+  docs.map(async (doc) => {
+    let pdfData = await downloadDocument(doc.documentID);
     if (pdfData === null) {
     } else {
       // s3にアップロード
       sendS3(s3, pdfData, doc.title);
+      console.log(doc.title);
       titles.push(doc.title);
     }
   });
