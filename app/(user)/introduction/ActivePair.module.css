@@ -10,6 +10,7 @@
 .borderL {
   margin: 0;
   padding: 20px 20px 0;
+  width: 50%;
 
   border-top: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
@@ -21,6 +22,7 @@
 .borderR {
   margin: 0;
   padding: 20px 20px 0;
+  width: 50%;
 
   border-top: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
@@ -49,6 +51,7 @@
 
   .borderL {
     padding: 20px;
+    width: auto;
 
     border-right: none;
     border-left: none;
@@ -56,6 +59,7 @@
 
   .borderR {
     padding: 20px;
+    width: auto;
 
     border-right: none;
   }

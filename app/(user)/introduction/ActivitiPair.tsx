@@ -1,4 +1,3 @@
-import { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import style from './ActivePair.module.css';
 
@@ -31,7 +30,7 @@ export default function ActivityPair({props1, props2}: ActivityPairProps) {
 }
 
 export type ActivityCardProps = {
-  image: StaticImageData
+  image: string
   alt: string
   title: string
   text: string
@@ -41,7 +40,7 @@ export type ActivityCardProps = {
 export function ActivityCard({image, alt, title, text, position}: ActivityCardProps) {
   return (
     <div className={position == 'left' ? style.borderL : style.borderR}>
-      <Image src={image} width={165} height={101} alt={alt}/>
+      <Image src={image} width={135} height={101} style={{objectFit: "cover"}} alt={alt}/>
       <div className={style.contents}>
         <h3 className={style.title}>{title}</h3>
         <p className={style.text}>{text}</p>
