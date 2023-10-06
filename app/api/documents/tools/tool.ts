@@ -7,8 +7,8 @@ export function createS3Client() {
     const s3 = new S3Client({
         region: 'ap-northeast-1',
         credentials: {
-            accessKeyId: '',
-            secretAccessKey: '',
+            accessKeyId: process.env.S3_ACCESS_KEY_ID || '',
+            secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || '',
         },
     });
     return s3;
