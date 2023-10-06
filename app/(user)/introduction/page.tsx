@@ -29,7 +29,7 @@ export default function Introduction() {
     {
       image: "https://alohahp.s3.ap-northeast-1.amazonaws.com/introduction/interview.png",
       alt: "面談の打ち合わせをするALOHAメンバー",
-      title: "東大生面談",
+      title: "オンライン面談",
       text: "開邦高校・昭和薬科大学附属高校の生徒を対象に、定期試験や夏休みを振り返る面談を実施しました。",
       position: "right"
     },

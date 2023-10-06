@@ -1,12 +1,11 @@
-import { StaticImageData } from 'next/image';
 import style from './ActivityUnit.module.css';
 import Image from 'next/image';
 
 type Props = {
     name: string
     description: JSX.Element
-    img: StaticImageData
-    imgSP: StaticImageData
+    img: string
+    imgSP: string
     last: boolean
 }
 

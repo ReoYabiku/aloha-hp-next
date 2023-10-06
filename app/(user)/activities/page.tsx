@@ -7,7 +7,7 @@ export default function Activities() {
       <Title
         subtitle='活動実績'
         title='Activities'
-        description='活動実績に関するいい感じの文章。長めの文章にしたいけど書くことないから適当に引き伸ばしています。'
+        description='沖縄の高校で展開している「東大プロジェクト」を中心に、ALOHAの活動内容をご紹介します。'
       />
       <Body
       />
