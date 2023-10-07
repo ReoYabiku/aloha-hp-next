@@ -6,12 +6,13 @@ type Props = {
     description: JSX.Element
     img: string
     imgSP: string
+    id: string
     last: boolean
 }
 
-export default function ActivityUnit({ name, description, img, imgSP, last }: Props) {
+export default function ActivityUnit({ name, description, img, imgSP, id, last }: Props) {
     return (
-        <div>
+        <div id={id}>
             <div className={style.container}>
                 <Image
                     className={style.image}

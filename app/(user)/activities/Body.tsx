@@ -5,6 +5,7 @@ type ActivityProps = {
     description: JSX.Element
     img: string
     imgSP: string
+    id: string
     last: boolean
 }
 
@@ -21,6 +22,7 @@ export default function Activities() {
                 </>,
             img: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/study_camp.jpg",
             imgSP: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/study_camp.jpg",
+            id: "study_camp",
             last: true,
         },
         {
@@ -34,6 +36,7 @@ export default function Activities() {
                 </>,
             img: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
             imgSP: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
+            id: "meetup",
             last: false,
         },
         {
@@ -47,6 +50,7 @@ export default function Activities() {
                 </>,
             img: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/campus_tour.jpg",
             imgSP: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/campus_tour.jpg",
+            id: "campus_tour",
             last: true,
         },
     ]
@@ -61,6 +65,7 @@ export default function Activities() {
                         description={props.description}
                         img={props.img}
                         imgSP={props.imgSP}
+                        id={props.id}
                         last={props.last}
                     />
                 ))

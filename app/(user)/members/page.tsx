@@ -31,7 +31,7 @@ export default async function Members() {
       />
 
       
-      <Content subtitle='Leader' title='代表挨拶' isgreen={false}>
+      <Content subtitle='Leader' title='代表挨拶' isgreen={false} id='leader'>
         <div className={style.flex}>
           {leader && (
             <div className={style.floatLeft}>
@@ -54,7 +54,7 @@ export default async function Members() {
       </Content>
       
 
-      <Content subtitle='Members' title='メンバー紹介' isgreen={true}>
+      <Content subtitle='Members' title='メンバー紹介' isgreen={true} id='members'>
         <div className={style.flexwrap}>
           {
             members.map((member) => (
