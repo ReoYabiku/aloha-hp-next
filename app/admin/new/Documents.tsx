@@ -141,11 +141,7 @@ function SaveButton({documents, setNewDocuments, setRegistrationStatus }: SaveBu
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(documents),
-    }).then(res => {
-      console.log(res);
-      console.log(typeof res);
-      return res.json();
-    });
+    }).then(res => res.json());
 
     if (res == documents.length) {
       setRegistrationStatus("succeeded")
