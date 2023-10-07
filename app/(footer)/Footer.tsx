@@ -18,15 +18,15 @@ export default function Footer() {
     {
       title: {
         name: "団体紹介",
-        href: "/introduction#",
+        href: "/introduction",
       },
       page1: {
         name: "活動理念",
-        href: "#",
+        href: "/introduction#philosophy",
       },
       page2: {
         name: "活動内容",
-        href: "#",
+        href: "/introduction#activity",
       },
     },
     {
