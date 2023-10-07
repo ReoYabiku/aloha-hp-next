@@ -1,18 +1,18 @@
-import { StaticImageData } from 'next/image';
 import style from './ActivityUnit.module.css';
 import Image from 'next/image';
 
 type Props = {
     name: string
     description: JSX.Element
-    img: StaticImageData
-    imgSP: StaticImageData
+    img: string
+    imgSP: string
+    id: string
     last: boolean
 }
 
-export default function ActivityUnit({ name, description, img, imgSP, last }: Props) {
+export default function ActivityUnit({ name, description, img, imgSP, id, last }: Props) {
     return (
-        <div>
+        <div id={id}>
             <div className={style.container}>
                 <Image
                     className={style.image}

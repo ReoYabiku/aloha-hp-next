@@ -18,35 +18,35 @@ export default function Footer() {
     {
       title: {
         name: "団体紹介",
-        href: "/introduction#",
+        href: "/introduction",
       },
       page1: {
         name: "活動理念",
-        href: "#",
+        href: "/introduction#philosophy",
       },
       page2: {
         name: "活動内容",
-        href: "#",
+        href: "/introduction#activity",
       },
     },
     {
       title: {
         name: "メンバー紹介",
-        href: "#",
+        href: "/members",
       },
       page1: {
         name: "代表挨拶",
-        href: "#",
+        href: "/members#leader",
       },
       page2: {
         name: "メンバー紹介",
-        href: "#",
+        href: "/members#members",
       },
     },
     {
       title: {
         name: "資料一覧",
-        href: "#",
+        href: "/documents",
       },
       page1: {
         name: "東大プロジェクト参加要項",
@@ -60,15 +60,15 @@ export default function Footer() {
     {
       title: {
         name: "活動実績",
-        href: "#",
+        href: "/activities",
       },
       page1: {
-        name: "出張講演会",
-        href: "#",
+        name: "勉強合宿",
+        href: "/activities#study_camp",
       },
       page2: {
-        name: "東大ツアー",
-        href: "#",
+        name: "東大生交流会",
+        href: "/activities#meetup",
       },
     },
   ]
