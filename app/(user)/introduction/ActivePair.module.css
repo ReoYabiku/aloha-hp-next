@@ -76,12 +76,16 @@
 
     border-right: none;
     border-left: none;
+
+    width: auto;
   }
 
   .borderR {
     padding: 25px 0;
 
     border-right: none;
+
+    width: auto;
   }
 
   .contents {
