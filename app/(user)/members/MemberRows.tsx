@@ -11,7 +11,6 @@ type MemberRowsProps = {
 
 export default function MemberRows({ members }: MemberRowsProps) {
   let defaultWidth = 1500;
-  console.log(navigator.userAgent);
   if (navigator.userAgent.match(/(iPhone)|(Android)|(Mobile)|(Windows Phone)/)) {
     defaultWidth = 450;
   }
