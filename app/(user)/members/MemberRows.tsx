@@ -10,7 +10,12 @@ type MemberRowsProps = {
 }
 
 export default function MemberRows({ members }: MemberRowsProps) {
-  const [width, setWidth] = useState<number>(1500);
+  let defaultWidth = 1500;
+  console.log(navigator.userAgent);
+  if (navigator.userAgent.match(/(iPhone)|(Android)|(Mobile)|(Windows Phone)/)) {
+    defaultWidth = 450;
+  }
+  const [width, setWidth] = useState<number>(defaultWidth);
   useEffect(() => {
     window.addEventListener("resize", () => {
       setWidth(window.innerWidth);
