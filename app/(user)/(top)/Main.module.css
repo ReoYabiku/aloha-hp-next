@@ -9,8 +9,8 @@
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 
-	width: 70%;
-	margin: auto 15%;
+	width: 80%;
+	margin: auto 10%;
 }
 
 @media screen and (max-width: 700px) {

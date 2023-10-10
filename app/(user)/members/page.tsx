@@ -2,7 +2,9 @@ import Title from '../../components/organisms/Title';
 import Content from '../../components/organisms/Content';
 import Person from './Person';
 import style from './page.module.css';
-import { PrismaClient } from '@prisma/client';
+import { members, PrismaClient } from '@prisma/client';
+import dynamic from 'next/dynamic';
+const MemberRows = dynamic(() => import('./MemberRows'), { ssr: false });
 
 export default async function Members() {
   const prisma = new PrismaClient();
@@ -12,7 +14,7 @@ export default async function Members() {
       is_leader: true,
     }
   });
-  const members = await prisma.members.findMany({
+  const members: members[] = await prisma.members.findMany({
     where: {
       status: "PUBLIC",
       is_leader: false,
@@ -30,7 +32,6 @@ export default async function Members() {
         description='沖縄に対して代表が抱く思いと共に、私たちALOHAのメンバーを紹介しています。'
       />
 
-      
       <Content subtitle='Leader' title='代表挨拶' isgreen={false} id='leader'>
         <div className={style.flex}>
           {leader && (
@@ -55,18 +56,7 @@ export default async function Members() {
       
 
       <Content subtitle='Members' title='メンバー紹介' isgreen={true} id='members'>
-        <div className={style.flexwrap}>
-          {
-            members.map((member) => (
-              <Person
-                key={member.id}
-                name={member.name}
-                affiliation={member.affiliation}
-                imageURL={member.image_url}
-              />
-            ))
-          }
-        </div>
+        <MemberRows members={members} />
       </Content>
     </main>
   );

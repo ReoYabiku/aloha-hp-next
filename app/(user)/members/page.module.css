@@ -6,18 +6,16 @@
     float: left;
 }
 
-.flexwrap {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
 .text {
-    margin: -20px 0 0;
+    margin: -20px 0 0 0;
 }
 
 @media screen and (max-width: 480px) {
-    .flex {
+    .flex, .spacebetween, .flexleft1, .flexleft2, .flexleft3 {
         display: block;
+    }
+
+    .text {
+        margin: -20px 0 0;
     }
 }
