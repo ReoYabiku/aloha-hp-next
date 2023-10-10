@@ -3,7 +3,8 @@ import Content from '../../components/organisms/Content';
 import Person from './Person';
 import style from './page.module.css';
 import { members, PrismaClient } from '@prisma/client';
-import MemberRows from './MemberRows';
+import dynamic from 'next/dynamic';
+const MemberRows = dynamic(() => import('./MemberRows'), { ssr: false });
 
 export default async function Members() {
   const prisma = new PrismaClient();
