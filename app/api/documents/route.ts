@@ -16,11 +16,8 @@ type DocumentForUpload = Document & {
 // TODO: このまま実装すると誰でもdocumentsを編集できるので、認証機構を実装する
 
 async function SaveDocuments(docs: Document[]): Promise<number> {
-  console.log("SaveDocuments is called.")
   const s3 = createS3Client();
   const prisma = new PrismaClient();
-  console.log(docs.length + " documents are found.");
-  console.log('clients ready.');
 
   let newDocs: DocumentForUpload[] = addFileNameToDoc(docs);
   newDocs.map(async (doc) => {
@@ -29,7 +26,6 @@ async function SaveDocuments(docs: Document[]): Promise<number> {
     } else {
       // s3にアップロード
       sendS3(s3, pdfData, doc.fileNameWithNumber);
-      console.log(doc.title + "was uploaded to s3 as " + doc.fileNameWithNumber + ".pdf");
     }
   });
 
