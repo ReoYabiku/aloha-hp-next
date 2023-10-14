@@ -33,14 +33,16 @@ async function SaveDocuments(docs: Document[]): Promise<number> {
     }
   });
 
+  const doc_status = (process.env.ENV == "production") ? "PUBLIC" : "PRIVATE";
+
   const { count } = await prisma.documents.createMany({
     data: newDocs.map((doc) => ({
       title: doc.title,
       embed_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/" + doc.fileNameWithNumber + ".pdf",
       description: doc.description,
+      status: doc_status,
       google_document_id: doc.documentID
-    }),
-    ),
+    })),
   });
 
   return count;
