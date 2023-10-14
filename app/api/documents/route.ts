@@ -47,7 +47,7 @@ async function SaveDocuments(docs: Document[]): Promise<number> {
 function addFileNameToDoc(docs: Document[]): DocumentForUpload[]{
   const newDocs: DocumentForUpload[] = [];
   docs.map((doc) => {
-    let fileNameWithNumber = doc.title + '_' +String(Math.floor(Math.random() * 10000));
+    let fileNameWithNumber = doc.title + '_' +String(Math.floor(Math.random() * 9000) + 1000);
     newDocs.push({ ...doc, fileNameWithNumber: fileNameWithNumber });
   });
   return newDocs;
