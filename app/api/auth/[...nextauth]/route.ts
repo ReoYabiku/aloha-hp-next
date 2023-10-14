@@ -10,7 +10,7 @@ const handler = NextAuth({
   ],
   callbacks: {
     async signIn({ profile }) {
-      if (profile?.email == "aloha.edu23@gmail.com") {
+      if (profile?.email == "aloha.edu23@gmail.com" || profile?.email == process.env.EMAIL1) {
         return true
       };
       return false
