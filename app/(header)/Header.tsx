@@ -1,12 +1,18 @@
 import Link from 'next/link';
 import style from './Header.module.css';
+import Image from 'next/image';
 
 export default function Header() {
   return (
     <header className={style.header}>
       <Link href={'/'} className={style.logo}>
         <div className={style.logo_img_wrapper}>
-          <img src="ALOHA_logo.png" alt="ALOHAのロゴ" width={45} height={45} />
+          <Image
+            src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/logo/aloha.png"}
+            alt="ALOHAのロゴ"
+            width={45}
+            height={45}
+          />
         </div>
         <div>
           <h1 className={style.title}>ALOHA</h1>
