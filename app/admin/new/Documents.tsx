@@ -5,13 +5,11 @@ import style from './Documents.module.css';
 
 export type Document = {
   title: string,
-  pdf: string,
   description: string,
   documentID: string,
 }
 const emptyDocument: Document = {
   title: "",
-  pdf: "",
   description: "",
   documentID: "",
 };
@@ -30,7 +28,6 @@ export default function NewDocument() {
         <thead>
           <tr style={{textAlign: "center"}}>
             <th>ファイル名</th>
-            <th>PDFのリンク</th>
             <th>説明文</th>
             <th>google documentのID</th>
           </tr>
@@ -88,9 +85,6 @@ function DocumentUnit({id, docs, set}: DocumentUnitProps) {
         <input type="text" size={30} value={docs[id].title} onChange={handleChangeFor("title")}/>
       </td>
       <td>
-        <input type="text" size={40} value={docs[id].pdf} onChange={handleChangeFor("pdf")}/>
-      </td>
-      <td>
         <textarea name="" id="" cols={50} rows={6} value={docs[id].description} onChange={handleDescriptionChange}></textarea>
       </td>
       <td>
@@ -139,7 +133,7 @@ type SaveButtonProps = {
   setNewDocuments: React.Dispatch<React.SetStateAction<Document[]>>,
   setRegistrationStatus: React.Dispatch<React.SetStateAction<RegisterationStatus>>,
 }
-function SaveButton({documents, setNewDocuments, setRegistrationStatus }: SaveButtonProps) {
+function SaveButton({documents, setNewDocuments, setRegistrationStatus }: SaveButtonProps) {  // ここの処理を書き換える。
   const handleClick = async () => {
     setRegistrationStatus("loading");
 
@@ -147,7 +141,7 @@ function SaveButton({documents, setNewDocuments, setRegistrationStatus }: SaveBu
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(documents),
-    }).then(res => res.json())
+    }).then(res => res.json());
 
     if (res == documents.length) {
       setRegistrationStatus("succeeded")
