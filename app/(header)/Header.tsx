@@ -8,10 +8,11 @@ export default function Header() {
       <Link href={'/'} className={style.logo}>
         <div className={style.logo_img_wrapper}>
           <Image
-            src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/logo/aloha.png"}
+            src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/logo/logo_1.png"}
             alt="ALOHAのロゴ"
             width={45}
             height={45}
+            style={{"objectFit": "contain"}}
           />
         </div>
         <div>
