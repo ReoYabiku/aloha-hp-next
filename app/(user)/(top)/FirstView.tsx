@@ -1,5 +1,4 @@
 import style from './FirstView.module.css';
-import NewsCard from './NewsCard';
 import Image from 'next/image';
 import firstViewPic from './src/first_view.jpg';
 import firstViewSPPic from './src/first_view_sp.png';
@@ -10,8 +9,7 @@ const FirstView = () => {
 			<Image
 				className={style.image}
 				src={firstViewPic}
-				height={600}
-				style={{"objectFit":"contain"}}
+				height={620}
 				alt="安田講堂"
 			/>
 			<Image
