@@ -15,7 +15,8 @@ const FirstView = () => {
 			<Image
 				className={style.imageSP}
 				src={firstViewSPPic}
-				fill={true}
+				// fill={true}
+				height={627}
 				alt='安田講堂'
 			/>
 
