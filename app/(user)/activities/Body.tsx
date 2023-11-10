@@ -41,10 +41,10 @@ export default function Activities() {
             name: 'キャンパスツアー',
             description:
                 <>
-                　キャンパスツアーの説明。実施場所、企画内容、参加人数等を記載する。
-                団体としての信頼獲得を目的としているので、企画の目的やその効果を表現できるような説明文を記載したい。
-                見た目を整えるために、写真と同じ幅まで文章が埋まっていると、なお望ましい。
-                ああああああああああああああああああああああああ。
+                　2023年に那覇国際高校の修学旅行生360名を対象にキャンパスツアーを開催しました。
+                生徒は各スポットごとに出題されるクイズに答えながら、キャンパスの魅力や歴史を学んでいました。<br/>
+                　また、ツアー中に東大生に質問・相談をし、刺激をもらっている生徒も多く見かけました。
+                この企画が生徒たちの未来の選択の一助となることを願っています。
                 </>,
             img: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/campus_tour.jpg",
             imgSP: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/campus_tour.jpg",
