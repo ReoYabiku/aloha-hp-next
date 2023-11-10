@@ -15,7 +15,7 @@ export default function Document({title, embedURL, description, showURL, downloa
     <section>
       <div className={style.container}>
         <div className={style.fileSample}>
-          <h2>{title}</h2>
+          <h2 className={style.title}>{title}</h2>
           <iframe src={embedURL} height={267} width={190} className={style.iframe}></iframe>
         </div>
         <div className={style.text}>
