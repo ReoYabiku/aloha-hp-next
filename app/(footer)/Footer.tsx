@@ -49,12 +49,12 @@ export default function Footer() {
         href: "/documents",
       },
       page1: {
-        name: "東大プロジェクト参加要項",
-        href: "#",
+        name: "団体紹介スライド",
+        href: "/documents#団体紹介スライド",
       },
       page2: {
-        name: "東大生交流会プログラム",
-        href: "#",
+        name: "東大プロジェクト参加要項",
+        href: "/documents#東大プロジェクト参加要項",
       },
     },
     {
