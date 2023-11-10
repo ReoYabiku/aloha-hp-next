@@ -7,7 +7,7 @@ type Member = {
   imageURL: string,
 };
 
-export default function Person({ name, affiliation, imageURL}: Member) {
+export default function Person({ name, affiliation, imageURL }: Member) {
   return (
     <div className={style.border}>
       <Image

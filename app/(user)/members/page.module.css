@@ -11,11 +11,16 @@
 }
 
 @media screen and (max-width: 480px) {
-    .flex, .spacebetween, .flexleft1, .flexleft2, .flexleft3 {
+    .flex {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .floatLeft {
         display: block;
     }
 
     .text {
-        margin: -20px 0 0;
+        margin: -40px 0 0;
     }
 }
