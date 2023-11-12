@@ -10,8 +10,12 @@ import { Analytics } from '@vercel/analytics/react';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '学生団体ALOHA',
+  title: {
+    template: "%s | 学生団体ALOHA",
+    default: "学生団体ALOHA",
+  },
   description: 'ALOHAは、難関大への進学を目指す沖縄の高校生を応援する東大発の学生団体です。',
+  authors: [{name: "学生団体ALOHA"}],
 }
 
 export default function RootLayout({

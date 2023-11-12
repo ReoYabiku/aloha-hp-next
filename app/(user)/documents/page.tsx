@@ -1,6 +1,11 @@
+import { Metadata } from 'next';
 import Document from './Document';
 import style from './page.module.css';
 import { PrismaClient } from '@prisma/client';
+
+export const metadata: Metadata = {
+  title: "資料一覧",
+}
 
 export default async function Documents() {
   const prisma = new PrismaClient();

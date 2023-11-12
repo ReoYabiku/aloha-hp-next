@@ -1,5 +1,10 @@
 import Title from '../../components/organisms/Title';
 import Body from './Body';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "活動実績",
+}
 
 export default function Activities() {
   return (

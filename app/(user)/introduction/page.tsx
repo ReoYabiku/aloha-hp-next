@@ -1,7 +1,11 @@
 import Title from '../../components/organisms/Title';
 import Content from '../../components/organisms/Content';
 import ActivityPair, { ActivityCardProps } from './ActivitiPair';
-import gatheringPic from './gathering.png';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "団体紹介",
+}
 
 export default function Introduction() {
   const activities: ActivityCardProps[] = [

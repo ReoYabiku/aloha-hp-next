@@ -4,7 +4,12 @@ import Person from './Person';
 import style from './page.module.css';
 import { members, PrismaClient } from '@prisma/client';
 import dynamic from 'next/dynamic';
+import { Metadata } from 'next';
 const MemberRows = dynamic(() => import('./MemberRows'), { ssr: false });
+
+export const metadata: Metadata = {
+  title: "メンバー紹介",
+}
 
 export default async function Members() {
   const prisma = new PrismaClient();
