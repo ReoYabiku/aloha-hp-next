@@ -1,0 +1,27 @@
+.container {
+    margin: 0 20px 0;
+
+    border-radius: 8px;
+    box-shadow: 0px 10px 10px -6px rgba(0, 0, 0, 0.5);
+
+    transition-duration: 0.5s;
+}
+
+.container:hover {
+    transform: scale(0.97);
+    transition-duration: 0.5s;
+}
+
+.image {
+    aspect-ratio: 1.8;
+}
+
+.text {
+    width: 90%;
+    margin: 0 5% 0;
+}
+
+.summary {
+    width: 100%;
+    word-wrap: break-word;
+}

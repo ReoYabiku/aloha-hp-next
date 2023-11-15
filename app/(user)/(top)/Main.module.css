@@ -4,6 +4,15 @@
 	font-weight: bold;
 }
 
+.articles {
+	display: flex;
+	justify-content: space-between;
+
+	width: 88%;
+	margin: auto 6%;
+	cursor: pointer;
+}
+
 .cards {
 	display: flex;
 	flex-wrap: wrap;
