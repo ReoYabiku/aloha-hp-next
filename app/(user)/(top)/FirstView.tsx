@@ -2,6 +2,7 @@ import style from './FirstView.module.css';
 import Image from 'next/image';
 import firstViewPic from './src/first_view.jpg';
 import firstViewSPPic from './src/first_view_sp.png';
+import svg from './src/top_copy.svg';
 
 const FirstView = () => {
 	return (
@@ -9,7 +10,7 @@ const FirstView = () => {
 			<Image
 				className={style.image}
 				src={firstViewPic}
-				height={620}
+				height={590}
 				alt="安田講堂"
 			/>
 			<Image
@@ -19,10 +20,17 @@ const FirstView = () => {
 				height={627}
 				alt='安田講堂'
 			/>
+			<Image
+				src={svg}
+				alt="手書きのキャッチコピー"
+				className={style.hand_copy}
+				width={500}
+				height={200}
+			/>
 
 			{/* 三角形 */}
-			<div className={style.triangle1}></div>
-			<div className={style.triangle2}></div>
+			{/* <div className={style.triangle1}></div>
+			<div className={style.triangle2}></div> */}
 
 			{/* カード */}
 			{/* <NewsCard
@@ -31,9 +39,9 @@ const FirstView = () => {
 				message3='参加申し込みはこちら ▶︎'
 			/> */}
 
-			<h2 className={style.copy1}>沖縄から</h2>
+			{/* <h2 className={style.copy1}>沖縄から</h2>
 			<h2 className={style.copy2}>東大を</h2>
-			<h2 className={style.copy3}>日常に</h2>
+			<h2 className={style.copy3}>日常に</h2> */}
 
 			<div className={style.border}></div>
 

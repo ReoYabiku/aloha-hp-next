@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import style from './Header.module.css';
 import Image from 'next/image';
+import svg from './src/logo-string.svg';
 
 export default function Header() {
   return (
@@ -10,14 +11,21 @@ export default function Header() {
           <Image
             src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/logo/logo_1.png"}
             alt="ALOHAのロゴ"
-            width={45}
-            height={45}
+            width={70}
+            height={70}
             style={{"objectFit": "contain"}}
           />
         </div>
         <div>
+          <Image
+            src={svg}
+            alt="ALOHAのロゴ(文字)"
+            width={120}
+            height={30}
+            style={{"objectFit": "contain"}}
+            className={style.subtitle}
+          />
           <h1 className={style.title}>ALOHA</h1>
-          <p className={style.subtitle}>沖縄から東大を、日常に</p>
         </div>
       </Link>
       <div className={style.nav}>

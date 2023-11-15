@@ -9,6 +9,13 @@
 	object-fit: fill;
 }
 
+.hand_copy {
+	z-index: 100;
+	position: absolute;
+	top: 310px;
+	left: 950px;
+}
+
 .triangle1 {
 	position: absolute;
 	top: 0;
@@ -83,7 +90,7 @@
 }
 
 @media screen and (max-width: 480px) {
-	.image, .copy1, .copy2, .copy3 {
+	.image, .copy1, .copy2, .copy3, .hand_copy {
 		display: none;
 	}
 
