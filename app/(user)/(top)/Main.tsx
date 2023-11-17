@@ -55,9 +55,9 @@ export default function Main() {
 
   return (
     <section>
-      <h2 className={style.head}>新着記事</h2>
+      <h2 className={`${style.head} ${style.onlyPC}`}>新着記事</h2>
       <div>
-        <div className={style.articles}>
+        <div className={`${style.articles} ${style.onlyPC}`}>
           {
             articles.map((article, id) => (
               <Article
