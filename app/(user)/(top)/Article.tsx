@@ -21,7 +21,7 @@ export default function Article({ image_url, alt, title, article_url, summary }:
         src={image_url}
         sizes='100vw'
         style={{
-          // "objectFit": "cover"
+          objectFit: 'cover',
           width: '100%',
           height: 'auto',
         }}
