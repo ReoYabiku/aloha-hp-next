@@ -13,7 +13,8 @@
 }
 
 .image {
-    aspect-ratio: 1.8;
+    aspect-ratio: 1.6;
+    border-radius: 8px 8px 0 0;
 }
 
 .text {
