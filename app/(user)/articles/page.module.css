@@ -35,6 +35,13 @@
     padding: 20px 40px;
 }
 
+.text_headline {
+    padding-bottom: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-pale-main);
+}
+
 .right_nav {
     padding-left: 20px;
 }
@@ -52,14 +59,20 @@
     margin-bottom: 20px;
 }
 
-.table_of_contents_wrapper{
-    padding: 20px;
-}
-
 .table_of_contents {
     width: 250px;
     background-color: var(--color-white);
     border-radius: 5px;
     
     height: 200px;
+}
+
+/* 画面上端にきて初めて有効にするにはどうしたらいい？ */
+.table_of_contents:hover {
+    position: fixed;
+    top: 10;
+}
+
+.table_of_contents_wrapper{
+    padding: 20px;
 }

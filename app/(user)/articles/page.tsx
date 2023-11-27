@@ -11,25 +11,25 @@ export default function Articles() {
       <div className={style.content}>
         <section className={style.text}>
           <div className={style.text_wrapper}>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。ちゃんと長い文章を書かないと横幅が確保できないのは問題かも？ちゃんと長い文章を書かないと横幅が確保できないのは問題かも？</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3>小見出し</h3>
+            <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
           </div>
         </section>
