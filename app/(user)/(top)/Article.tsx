@@ -10,9 +10,10 @@ export type ArticleProps = {
   title: string,
   article_url: string,
   summary: string,
+  date: string,
 }
 
-export default function Article({ image_url, alt, title, article_url, summary }: ArticleProps) {
+export default function Article({ image_url, alt, title, article_url, summary, date }: ArticleProps) {
   const router = useRouter();
   return (
     <div className={style.container} onClick={() => router.push(article_url)}>
@@ -32,6 +33,7 @@ export default function Article({ image_url, alt, title, article_url, summary }:
       <div className={style.text}>
         <h3>{title}</h3>
         <p className={style.summary}>{summary}</p>
+        <p className={style.date}>{date}</p>
       </div>
     </div>
   )
