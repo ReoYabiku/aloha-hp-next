@@ -7,8 +7,9 @@ export default function Articles() {
   const [tableOfContentsClass, setTableOfContentsClass] = useState(style.table_of_contents)
   
   const handleScroll = () => {
+    if (typeof window === 'undefined') return;
+
     var scrollY = window.scrollY;
-    
     if (scrollY > 430) {
       setTableOfContentsClass(() => `${style.table_of_contents} ${style.fix}`)
     } else {
