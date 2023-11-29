@@ -27,7 +27,7 @@
 
 .text {
     background-color: var(--color-white);
-    border-radius: 5px;
+    border-radius: 20px;
     margin: 0 20px 50px;
 }
 
@@ -51,26 +51,26 @@
 }
 
 .author {
-    width: 250px;
+    width: 280px;
     background-color: var(--color-white);
-    border-radius: 5px;
+    border-radius: 20px;
 
     height: 200px;
     margin-bottom: 20px;
 }
 
 .table_of_contents {
-    width: 250px;
+    width: 280px;
     background-color: var(--color-white);
-    border-radius: 5px;
+    border-radius: 20px;
     
     height: 200px;
 }
 
 /* 画面上端にきて初めて有効にするにはどうしたらいい？ */
-.table_of_contents:hover {
+.fix {
     position: fixed;
-    top: 10;
+    top: 20px;
 }
 
 .table_of_contents_wrapper{

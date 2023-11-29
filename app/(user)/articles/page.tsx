@@ -1,6 +1,23 @@
+"use client"
+
+import { useState } from 'react';
 import style from './page.module.css';
 
 export default function Articles() {
+  const [tableOfContentsClass, setTableOfContentsClass] = useState(style.table_of_contents)
+  
+  const handleScroll = () => {
+    var scrollY = window.scrollY;
+    
+    if (scrollY > 430) {
+      setTableOfContentsClass(() => `${style.table_of_contents} ${style.fix}`)
+    } else {
+      setTableOfContentsClass(() => style.table_of_contents)
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll)
+
   return (
     <div className={style.container}>
       <section className={style.title}>
@@ -23,14 +40,6 @@ export default function Articles() {
             <p>本文。</p>
             <h3 className={style.text_headline}>小見出し</h3>
             <p>本文。</p>
-            <h3 className={style.text_headline}>小見出し</h3>
-            <p>本文。</p>
-            <h3 className={style.text_headline}>小見出し</h3>
-            <p>本文。</p>
-            <h3 className={style.text_headline}>小見出し</h3>
-            <p>本文。</p>
-            <h3 className={style.text_headline}>小見出し</h3>
-            <p>本文。</p>
           </div>
         </section>
         <div className={style.right_nav}>
@@ -39,7 +48,7 @@ export default function Articles() {
               <p>作者情報</p>
             </div>
           </section>
-          <section className={style.table_of_contents}>
+          <section className={tableOfContentsClass}>
             <div className={style.table_of_contents_wrapper}>
               <p>目次</p>
               <p>小見出し1</p>
