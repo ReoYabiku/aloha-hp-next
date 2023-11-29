@@ -67,7 +67,6 @@
     height: 200px;
 }
 
-/* 画面上端にきて初めて有効にするにはどうしたらいい？ */
 .fix {
     position: fixed;
     top: 20px;
@@ -75,4 +74,22 @@
 
 .table_of_contents_wrapper{
     padding: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .table_of_contents, .author, .right_nav {
+        display: none;
+    }
+
+    .content {
+        margin: 0 10px;
+    }
+
+    .text {
+        margin: 0 5px 50px;
+    }
+
+    .text_wrapper {
+        padding: 20px 20px;
+    }
 }

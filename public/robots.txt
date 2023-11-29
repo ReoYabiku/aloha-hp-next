@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://aloha.yabi-works.com
+
+# Sitemaps
+Sitemap: https://aloha.yabi-works.com/sitemap.xml

@@ -1,23 +1,26 @@
 "use client"
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import style from './page.module.css';
 
 export default function Articles() {
   const [tableOfContentsClass, setTableOfContentsClass] = useState(style.table_of_contents)
   
-  const handleScroll = () => {
-    if (typeof window === 'undefined') return;
+  useEffect(() => {
+    const handleScroll = () => {
+    
+      if (typeof window !== 'undefined') {
+        var scrollY = window.scrollY;
+        if (scrollY > 430) {
+          setTableOfContentsClass(() => `${style.table_of_contents} ${style.fix}`)
+        } else {
+          setTableOfContentsClass(() => style.table_of_contents)
+        }
+      }
 
-    var scrollY = window.scrollY;
-    if (scrollY > 430) {
-      setTableOfContentsClass(() => `${style.table_of_contents} ${style.fix}`)
-    } else {
-      setTableOfContentsClass(() => style.table_of_contents)
     }
-  }
-
-  window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll)
+  }, []);
 
   return (
     <div className={style.container}>
