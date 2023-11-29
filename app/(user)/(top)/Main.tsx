@@ -33,7 +33,7 @@ export default function Main() {
     {
       image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
       alt: "説明",
-      article_url: "/activities",
+      article_url: "/articles",
       title: "タイトル",
       summary: "こんな感じのイベントを実施しました！記事読んでね〜",
       date: "2023/11/21",
@@ -41,7 +41,7 @@ export default function Main() {
     {
       image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
       alt: "説明",
-      article_url: "/activities",
+      article_url: "/articles",
       title: "タイトル",
       summary: "こんな感じのイベントを実施しました！記事読んでね〜",
       date: "2023/11/21",
@@ -49,7 +49,7 @@ export default function Main() {
     {
       image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
       alt: "説明",
-      article_url: "/activities",
+      article_url: "/articles",
       title: "タイトル",
       summary: "こんな感じのイベントを実施しました！記事読んでね〜",
       date: "2023/11/21",
