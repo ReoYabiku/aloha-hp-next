@@ -1,6 +1,8 @@
 import TextCard from './TextCard';
 import style from './Main.module.css';
 import Article, { ArticleProps } from './Article';
+import LargeBlock, { LargeBlockProps } from './LargeBlock';
+import SmallBlock, { SmallBlockProps } from './SmallBlock';
 
 type TextCartProps = {
   text: string
@@ -54,7 +56,48 @@ export default function Main() {
       summary: "こんな感じのイベントを実施しました！記事読んでね〜",
       date: "2023/11/21",
     },
-  ]
+  ];
+
+  const largeBlocks: LargeBlockProps[] = [
+    {
+      url: "",
+      icon: "",
+      name: "",
+    },
+    {
+      url: "",
+      icon: "",
+      name: "",
+    },
+    {
+      url: "",
+      icon: "",
+      name: "",
+    },
+  ];
+
+  const smallBlocks: SmallBlockProps[] = [
+    {
+      url: "",
+      icon: "",
+      name: "",
+    },
+    {
+      url: "",
+      icon: "",
+      name: "",
+    },
+    {
+      url: "",
+      icon: "",
+      name: "",
+    },
+    {
+      url: "",
+      icon: "",
+      name: "",
+    },
+  ];
 
   return (
     <section>
@@ -71,6 +114,33 @@ export default function Main() {
                 title={article.title}
                 summary={article.summary}
                 date={article.date}
+              />
+              ))
+            }
+        </div>
+      </div>
+      <h2 className={`${style.head} ${style.onlyPC}`}>ALOHAについて</h2>
+      <div className={style.about}>
+        <div className={`${style.large_blocks} ${style.onlyPC}`}>
+          {
+            largeBlocks.map((largeBlock, id) => (
+              <LargeBlock
+                key={id}
+                url={largeBlock.url}
+                icon={largeBlock.icon}
+                name={largeBlock.name}
+              />
+              ))
+            }
+        </div>
+        <div className={`${style.small_blocks} ${style.onlyPC}`}>
+          {
+            smallBlocks.map((smallBlock, id) => (
+              <SmallBlock
+                key={id}
+                url={smallBlock.url}
+                icon={smallBlock.icon}
+                name={smallBlock.name}
               />
               ))
             }

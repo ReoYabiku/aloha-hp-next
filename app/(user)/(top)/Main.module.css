@@ -13,6 +13,22 @@
 	cursor: pointer;
 }
 
+.about {
+	width: 1000px;
+	margin: auto calc((100% - 1000px)/2);
+}
+
+.large_blocks {
+	display: flex;
+	justify-content: space-between;
+}
+
+.small_blocks {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
 .cards {
 	display: flex;
 	flex-wrap: wrap;
