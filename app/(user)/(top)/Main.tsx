@@ -8,6 +8,11 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
 import GroupsIcon from '@mui/icons-material/Groups';
 
+import DescriptionIcon from '@mui/icons-material/Description';
+import PhoneIcon from '@mui/icons-material/Phone';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
+
 type TextCartProps = {
   text: string
   path: string
@@ -82,24 +87,24 @@ export default function Main() {
 
   const smallBlocks: SmallBlockProps[] = [
     {
-      url: "",
-      icon: "",
-      name: "",
+      url: "/documents",
+      icon: <DescriptionIcon />,
+      name: "資料一覧",
     },
     {
-      url: "",
-      icon: "",
-      name: "",
+      url: "#",
+      icon: <PhoneIcon />,
+      name: "お問い合わせ",
     },
     {
-      url: "",
-      icon: "",
-      name: "",
+      url: "https://twitter.com/ALOHA_u_tokyo",
+      icon: <TwitterIcon />,
+      name: "公式X",
     },
     {
-      url: "",
-      icon: "",
-      name: "",
+      url: "#",
+      icon: <MeetingRoomIcon />,
+      name: "募集中のイベント",
     },
   ];
 

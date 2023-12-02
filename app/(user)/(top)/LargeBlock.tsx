@@ -1,10 +1,8 @@
 "use client"
 
 import style from './LargeBlock.module.css';
-import { SvgIcon, SvgIconTypeMap } from '@mui/material';
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import { SvgIcon } from '@mui/material';
 import Link from 'next/link';
-import { OverridableComponent } from '@mui/material/OverridableComponent';
 
 export type LargeBlockProps = {
   url: string,
