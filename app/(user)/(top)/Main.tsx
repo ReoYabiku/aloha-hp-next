@@ -4,6 +4,10 @@ import Article, { ArticleProps } from './Article';
 import LargeBlock, { LargeBlockProps } from './LargeBlock';
 import SmallBlock, { SmallBlockProps } from './SmallBlock';
 
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import MilitaryTechIcon from '@mui/icons-material/MilitaryTech';
+import GroupsIcon from '@mui/icons-material/Groups';
+
 type TextCartProps = {
   text: string
   path: string
@@ -60,19 +64,19 @@ export default function Main() {
 
   const largeBlocks: LargeBlockProps[] = [
     {
-      url: "",
-      icon: "",
-      name: "",
+      url: "/introduction",
+      icon: <AccountBalanceIcon />,
+      name: "団体紹介",
     },
     {
-      url: "",
-      icon: "",
-      name: "",
+      url: "/activities",
+      icon: <MilitaryTechIcon />,
+      name: "活動実績",
     },
     {
-      url: "",
-      icon: "",
-      name: "",
+      url: "/members",
+      icon: <GroupsIcon />,
+      name: "メンバー紹介",
     },
   ];
 
