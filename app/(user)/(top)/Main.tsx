@@ -13,32 +13,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 
-type TextCartProps = {
-  text: string
-  path: string
-}
-
 export default function Main() {
-
-  // TODO: 各活動に合わせて#以降を記載する
-  const textCards: TextCartProps[] = [
-    {
-      text: "出張講演会",
-      path: "/activities#"
-    },
-    {
-      text: "東大ツアー",
-      path: "/activities#"
-    },
-    {
-      text: "東大生交流会",
-      path: "/activities#"
-    },
-    {
-      text: "勉強合宿",
-      path: "/activities#"
-    }
-  ]
 
   const articles: ArticleProps[] = [
     {
@@ -109,65 +84,58 @@ export default function Main() {
   ];
 
   return (
-    <section>
-      <h2 className={`${style.head} ${style.onlyPC}`}>新着記事</h2>
-      <div>
-        <div className={`${style.articles} ${style.onlyPC}`}>
-          {
-            articles.map((article, id) => (
-              <Article
-                key={id}
-                image_url={article.image_url}
-                alt={article.alt}
-                article_url={article.article_url}
-                title={article.title}
-                summary={article.summary}
-                date={article.date}
-              />
-              ))
-            }
+    <>
+      <section className={style.new_articles}>
+        <h2 className={`${style.head} ${style.onlyPC}`}>新着記事</h2>
+        <div>
+          <div className={`${style.articles} ${style.onlyPC}`}>
+            {
+              articles.map((article, id) => (
+                <Article
+                  key={id}
+                  image_url={article.image_url}
+                  alt={article.alt}
+                  article_url={article.article_url}
+                  title={article.title}
+                  summary={article.summary}
+                  date={article.date}
+                />
+                ))
+              }
+          </div>
         </div>
-      </div>
-      <h2 className={`${style.head} ${style.onlyPC}`}>ALOHAについて</h2>
-      <div className={style.about}>
-        <div className={`${style.large_blocks} ${style.onlyPC}`}>
-          {
-            largeBlocks.map((largeBlock, id) => (
-              <LargeBlock
-                key={id}
-                url={largeBlock.url}
-                icon={largeBlock.icon}
-                name={largeBlock.name}
-              />
-              ))
-            }
+      </section>
+
+      <section>
+        <h2 className={`${style.head} ${style.onlyPC}`}>ALOHAについて</h2>
+        <div className={style.about}>
+          <div className={`${style.large_blocks} ${style.onlyPC}`}>
+            {
+              largeBlocks.map((largeBlock, id) => (
+                <LargeBlock
+                  key={id}
+                  url={largeBlock.url}
+                  icon={largeBlock.icon}
+                  name={largeBlock.name}
+                />
+                ))
+              }
+          </div>
+          <div className={`${style.small_blocks} ${style.onlyPC}`}>
+            {
+              smallBlocks.map((smallBlock, id) => (
+                <SmallBlock
+                  key={id}
+                  url={smallBlock.url}
+                  icon={smallBlock.icon}
+                  name={smallBlock.name}
+                />
+                ))
+              }
+          </div>
         </div>
-        <div className={`${style.small_blocks} ${style.onlyPC}`}>
-          {
-            smallBlocks.map((smallBlock, id) => (
-              <SmallBlock
-                key={id}
-                url={smallBlock.url}
-                icon={smallBlock.icon}
-                name={smallBlock.name}
-              />
-              ))
-            }
-        </div>
-      </div>
-      <h2 className={style.head}>活動実績</h2>
-      <div className={style.cards}>
-        {
-          textCards.map((textCard) => (
-            <TextCard
-              key={textCard.text}
-              text={textCard.text}
-              path={textCard.path}
-            />
-          ))
-        }
-      </div>
-      
-    </section>
+        
+      </section>
+    </>
   );
 }
