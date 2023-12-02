@@ -72,6 +72,10 @@
     top: 20px;
 }
 
+.static {
+    position: static;
+}
+
 .table_of_contents_wrapper{
     padding: 20px;
 }

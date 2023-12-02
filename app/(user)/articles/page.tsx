@@ -11,7 +11,10 @@ export default function Articles() {
     
       if (typeof window !== 'undefined') {
         var scrollY = window.scrollY;
-        if (scrollY > 430) {
+        var min = document.body.scrollHeight - 780;
+        if (scrollY > min) {
+          setTableOfContentsClass(() => `${style.table_of_contents} ${style.static}`)
+        } else if (scrollY > 430) {
           setTableOfContentsClass(() => `${style.table_of_contents} ${style.fix}`)
         } else {
           setTableOfContentsClass(() => style.table_of_contents)
