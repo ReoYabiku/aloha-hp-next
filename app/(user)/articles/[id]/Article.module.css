@@ -55,7 +55,7 @@
     background-color: var(--color-white);
     border-radius: 20px;
 
-    height: 200px;
+    height: 180px;
     margin-bottom: 20px;
 }
 
@@ -63,8 +63,10 @@
     width: 280px;
     background-color: var(--color-white);
     border-radius: 20px;
-    
-    height: 200px;
+}
+
+.table_of_contents_text {
+    margin: 5px auto 5px;
 }
 
 .fix {
@@ -95,5 +97,10 @@
 
     .text_wrapper {
         padding: 20px 20px;
+    }
+    
+    .image {
+        width: 320px;
+        height: 200px;
     }
 }
