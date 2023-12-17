@@ -84,7 +84,7 @@ export default function MeetUp() {
               <p className={style.table_of_contents_text}>概要</p>
               <p className={style.table_of_contents_text}>プログラム</p>
               <p className={style.table_of_contents_text}>１東大紹介</p>
-              <p className={style.table_of_contents_text}>２受験体験２</p>
+              <p className={style.table_of_contents_text}>２受験体験</p>
               <p className={style.table_of_contents_text}>３クイズ大会</p>
               <p className={style.table_of_contents_text}>４自由交流</p>
               <p className={style.table_of_contents_text}>まとめ</p>
