@@ -10,15 +10,6 @@
 	font-weight: bold;
 }
 
-.articles {
-	display: flex;
-	justify-content: space-between;
-
-	width: 88%;
-	margin: auto 6%;
-	cursor: pointer;
-}
-
 .about {
 	width: 1000px;
 	margin: auto calc((100% - 1000px)/2);

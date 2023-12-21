@@ -1,6 +1,5 @@
-import TextCard from './TextCard';
 import style from './Main.module.css';
-import Article, { ArticleProps } from './Article';
+import { ArticleProps } from '../../components/molecules/Article';
 import LargeBlock, { LargeBlockProps } from './LargeBlock';
 import SmallBlock, { SmallBlockProps } from './SmallBlock';
 
@@ -12,6 +11,7 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import PhoneIcon from '@mui/icons-material/Phone';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
+import Articles from '../../components/organisms/Articles';
 
 export default function Main() {
 
@@ -87,23 +87,9 @@ export default function Main() {
     <>
       <section className={style.new_articles}>
         <h2 className={style.head}>新着記事</h2>
-        <div>
-          <div className={style.articles}>
-            {
-              articles.map((article, id) => (
-                <Article
-                  key={id}
-                  image_url={article.image_url}
-                  alt={article.alt}
-                  article_url={article.article_url}
-                  title={article.title}
-                  summary={article.summary}
-                  date={article.date}
-                />
-                ))
-              }
-          </div>
-        </div>
+        <Articles
+          articles={articles}
+        />
       </section>
 
       <section>
