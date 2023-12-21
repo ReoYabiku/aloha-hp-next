@@ -31,7 +31,7 @@ export default function Article({ image_url, alt, title, article_url, summary, d
         alt={alt}
       />
       <div className={style.text}>
-        <h3>{title}</h3>
+        <h3 className={style.title}>{title}</h3>
         <p className={style.summary}>{summary}</p>
         <p className={style.date}>{date}</p>
       </div>

@@ -4,7 +4,7 @@
 
 .title {
     text-align: center;
-    height: 150px;
+    height: 200px;
 }
 
 .title_box {
@@ -14,8 +14,9 @@
 
 .title_text {
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: calc(50% - 400px);
+    font-size: 32px;
 
     width: 800px;
 }

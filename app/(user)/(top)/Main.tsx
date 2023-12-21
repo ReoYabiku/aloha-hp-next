@@ -86,9 +86,9 @@ export default function Main() {
   return (
     <>
       <section className={style.new_articles}>
-        <h2 className={`${style.head} ${style.onlyPC}`}>新着記事</h2>
+        <h2 className={style.head}>新着記事</h2>
         <div>
-          <div className={`${style.articles} ${style.onlyPC}`}>
+          <div className={style.articles}>
             {
               articles.map((article, id) => (
                 <Article
@@ -107,9 +107,9 @@ export default function Main() {
       </section>
 
       <section>
-        <h2 className={`${style.head} ${style.onlyPC}`}>ALOHAについて</h2>
+        <h2 className={style.head}>ALOHAについて</h2>
         <div className={style.about}>
-          <div className={`${style.large_blocks} ${style.onlyPC}`}>
+          <div className={style.large_blocks}>
             {
               largeBlocks.map((largeBlock, id) => (
                 <LargeBlock
@@ -121,7 +121,7 @@ export default function Main() {
                 ))
               }
           </div>
-          <div className={`${style.small_blocks} ${style.onlyPC}`}>
+          <div className={style.small_blocks}>
             {
               smallBlocks.map((smallBlock, id) => (
                 <SmallBlock

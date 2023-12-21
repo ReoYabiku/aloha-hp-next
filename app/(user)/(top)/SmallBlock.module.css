@@ -19,3 +19,20 @@
     font-weight: bold;
     text-align: center;
 }
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon {
+        margin: 20px 25px -10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .text {
+        font-size: 10px;
+    }
+}

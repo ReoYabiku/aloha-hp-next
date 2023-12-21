@@ -52,6 +52,16 @@
 	
 	.head {
 		margin: 0 0 10px;
+		padding-top: 20px;
 		font-size: 28px;
+	}
+
+	.articles {
+		display: block;
+	}
+
+	.about {
+		width: 350px;
+		margin: auto calc((100% - 350px)/2);
 	}
 }

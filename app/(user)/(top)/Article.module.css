@@ -29,6 +29,20 @@
 }
 
 .date {
-    float: right;
+    text-align: right;
     margin-top: -5px;
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        margin: 5px 0;
+    }
+
+    .summary {
+        margin: 0;
+    }
+
+    .date {
+        padding-bottom: 10px;
+    }
 }
