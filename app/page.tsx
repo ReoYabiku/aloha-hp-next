@@ -9,7 +9,7 @@ export default function Top() {
       <div className={style.blackBox}></div>
       <FirstView />
       <div className={style.blackBox}></div>
-      <Navigation />
+      {/* <Navigation /> */}
       <Main />
     </main>
   );

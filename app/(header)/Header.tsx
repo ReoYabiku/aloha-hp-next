@@ -31,8 +31,8 @@ export default function Header() {
       <div className={style.nav}>
         <Link href={'/introduction'} className={style.other_pages}>団体紹介</Link>
         <Link href={'/members'} className={style.other_pages}>メンバー紹介</Link>
-        <Link href={'/documents'} className={style.other_pages}>資料一覧</Link>
         <Link href={'/activities'} className={style.other_pages}>活動実績</Link>
+        <Link href={'/documents'} className={style.other_pages}>資料一覧</Link>
       </div>
     </header>
   );
