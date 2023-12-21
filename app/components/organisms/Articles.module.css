@@ -2,8 +2,8 @@
 	display: flex;
 	justify-content: space-between;
 
-	width: 88%;
-	margin: auto 6%;
+	width: 100%;
+	margin: auto 0;
 	cursor: pointer;
 }
 

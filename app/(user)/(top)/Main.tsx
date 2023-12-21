@@ -87,9 +87,9 @@ export default function Main() {
     <>
       <section className={style.new_articles}>
         <h2 className={style.head}>新着記事</h2>
-        <Articles
-          articles={articles}
-        />
+        <div className={style.articles}>
+          <Articles articles={articles} />
+        </div>
       </section>
 
       <section>

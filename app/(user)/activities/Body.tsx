@@ -1,4 +1,7 @@
 import ActivityUnit from './ActivityUnit';
+import { ArticleProps } from '@/app/components/molecules/Article';
+import Articles from '@/app/components/organisms/Articles';
+import Content from '@/app/components/organisms/Content';
 
 type ActivityProps = {
     name: string
@@ -51,23 +54,55 @@ export default function Activities() {
             id: "campus_tour",
             last: true,
         },
-    ]
+    ];
+
+    const articles: ArticleProps[] = [
+        {
+            image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
+            alt: "東大生交流会の様子",
+            article_url: "/articles/meet-up",
+            title: "東大生交流会@昭和薬科",
+            summary: "2023年6月17日(土)に、昭和薬科大学附属高等学校・中...",
+            date: "2023/12/18",
+        },
+        {
+            image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/study_camp.jpg",
+            alt: "勉強合宿の様子",
+            article_url: "/articles/study-camp",
+            title: "勉強合宿@沖縄国際ユースホステル",
+            summary: "2023年9月9日から10日の2日間に渡り、沖縄県奥武山にあ...",
+            date: "2023/12/18",
+        },
+        {
+            image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/articles/visiting-lecture1.jpg",
+            alt: "説明",
+            article_url: "/articles/visiting-lecture",
+            title: "出張講演会@昭和薬科",
+            summary: "2023年3月22日、沖縄県昭和薬科大学附属高校の生徒を対象...",
+            date: "2023/12/18",
+        },
+  ];
 
     return (
         <section>
-            {
-                activityDetails.map((props) => (
-                    <ActivityUnit
-                        key={props.name}
-                        name={props.name}
-                        description={props.description}
-                        img={props.img}
-                        imgSP={props.imgSP}
-                        id={props.id}
-                        last={props.last}
-                    />
-                ))
-            }
+            <Content subtitle='articles' title='活動記事' isgreen={false} id='articles'>
+                <Articles articles={articles} />
+            </Content>
+            <Content subtitle='activities' title='これまでの活動' isgreen={true} id='activities'>
+                {
+                    activityDetails.map((props) => (
+                        <ActivityUnit
+                            key={props.name}
+                            name={props.name}
+                            description={props.description}
+                            img={props.img}
+                            imgSP={props.imgSP}
+                            id={props.id}
+                            last={props.last}
+                        />
+                    ))
+                }
+            </Content>
         </section>
     );
 }
