@@ -69,17 +69,25 @@ export default function Activities() {
             image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/study_camp.jpg",
             alt: "勉強合宿の様子",
             article_url: "/articles/study-camp",
-            title: "勉強合宿@沖縄国際ユースホステル",
+            title: "勉強合宿@沖縄ユースホステル",
             summary: "2023年9月9日から10日の2日間に渡り、沖縄県奥武山にあ...",
             date: "2023/12/18",
         },
         {
             image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/articles/visiting-lecture1.jpg",
-            alt: "説明",
+            alt: "出張講演会の様子",
             article_url: "/articles/visiting-lecture",
             title: "出張講演会@昭和薬科",
             summary: "2023年3月22日、沖縄県昭和薬科大学附属高校の生徒を対象...",
             date: "2023/12/18",
+        },
+        {
+            image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/articles/online-interview2.png",
+            alt: "オンライン面談の様子",
+            article_url: "/articles/online-interview",
+            title: "オンライン面談",
+            summary: "2023年10月、今年度2度目となるオンライン面談を実施しま...",
+            date: "2023/12/22",
         },
   ];
 

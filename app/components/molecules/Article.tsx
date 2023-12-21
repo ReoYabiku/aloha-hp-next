@@ -26,7 +26,7 @@ export default function Article({ image_url, alt, title, article_url, summary, d
           width: '100%',
           height: 'auto',
         }}
-        width={350}
+        width={360}
         height={200}
         alt={alt}
       />
