@@ -47,7 +47,7 @@ export default function Articles({articles}: ArticlesProps) {
                     ))
                 }
                 {
-                    Array.from({length: (articlesPerRow-rest)%3}).map(_ => <DummyArticle/>)
+                    Array.from({length: (articlesPerRow-rest)%3}).map((_,i) => <DummyArticle key={i}/>)
                 }
             </div>
         </>
