@@ -15,7 +15,7 @@ export default function Articles({articles}: ArticlesProps) {
         <>
             {
                 Array.from({length: rows}, (_, i) => (
-                    <div className={style.container}>
+                    <div className={style.container} key={i}>
                         {
                             articles.slice(i*articlesPerRow,(i+1)*articlesPerRow).map((article, id) => (
                                 <Article
