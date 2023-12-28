@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 480px) {
-	.image, .copy1, .copy2, .copy3, .hand_copy {
+	.image, .copy1, .copy2, .copy3 {
 		display: none;
 	}
 
@@ -122,6 +122,13 @@
 		border-left: 180px solid transparent;
 
 		opacity: 0.6;
+	}
+
+	.hand_copy {
+		top: 0;
+		left: 10px;
+		width: 300px;
+		height: 200px;
 	}
 
 	.copySP1 {
