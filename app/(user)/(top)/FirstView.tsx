@@ -44,9 +44,6 @@ const FirstView = () => {
 			<h2 className={style.copy3}>日常に</h2> */}
 
 			<div className={style.border}></div>
-
-			{/* <h2 className={style.copySP1}>沖縄から東大を、</h2>
-			<h2 className={style.copySP2}>日常に</h2> */}
 		</section>
 	);
 }
