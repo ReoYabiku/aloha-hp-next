@@ -1,7 +1,7 @@
 import style from './FirstView.module.css';
 import Image from 'next/image';
 import firstViewPic from './src/first_view.jpg';
-import firstViewSPPic from './src/first_view_sp.png';
+import firstViewSPPic from './src/first_view_sp.jpg';
 import firstViewCopy from './src/first_view_copy.svg';
 
 const FirstView = () => {
