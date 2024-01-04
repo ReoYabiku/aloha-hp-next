@@ -1,8 +1,8 @@
 import style from './FirstView.module.css';
 import Image from 'next/image';
 import firstViewPic from './src/first_view.jpg';
-import firstViewSPPic from './src/first_view_sp.png';
-import svg from './src/top_copy.svg';
+import firstViewSPPic from './src/first_view_sp.jpg';
+import firstViewCopy from './src/first_view_copy.svg';
 
 const FirstView = () => {
 	return (
@@ -21,11 +21,11 @@ const FirstView = () => {
 				alt='安田講堂'
 			/>
 			<Image
-				src={svg}
+				src={firstViewCopy}
 				alt="手書きのキャッチコピー"
 				className={style.hand_copy}
-				width={500}
-				height={200}
+				width={700}
+				height={360}
 			/>
 
 			{/* 三角形 */}
@@ -44,9 +44,6 @@ const FirstView = () => {
 			<h2 className={style.copy3}>日常に</h2> */}
 
 			<div className={style.border}></div>
-
-			<h2 className={style.copySP1}>沖縄から東大を、</h2>
-			<h2 className={style.copySP2}>日常に</h2>
 		</section>
 	);
 }

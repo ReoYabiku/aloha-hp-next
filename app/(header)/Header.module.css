@@ -20,20 +20,12 @@
 	margin-right: 5px;
 }
 
-.subtitle {
-	margin: 6px 0 0 10px;
+.logo_string {
+	margin: 11px 0 0 5px;
 	font-size: 11px;
 	font-weight: bold;
 	padding: 0;
 	font-family: "monospace";
-}
-
-.title {
-	font-size: 34px;
-	font-family: 'Comic Sans MS';
-	font-weight: 100;
-	margin-top: -16px;
-	margin-left: 10px;
 }
 
 .nav {
@@ -62,15 +54,6 @@
 @media screen and (max-width: 480px) {
 	.header {
 		height: 80px;
-	}
-
-	.title {
-		margin-top: -15px;
-		font-size: 32px;
-	}
-
-	.subtitle {
-		font-size: 14px;
 	}
 
 	.nav {

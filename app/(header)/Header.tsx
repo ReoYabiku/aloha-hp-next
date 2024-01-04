@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import style from './Header.module.css';
 import Image from 'next/image';
-import svg from './src/logo-string.svg';
+import svg from './src/logo_string.svg';
 
 export default function Header() {
   return (
@@ -21,11 +21,10 @@ export default function Header() {
             src={svg}
             alt="ALOHAのロゴ(文字)"
             width={120}
-            height={30}
+            height={55}
             style={{"objectFit": "contain"}}
-            className={style.subtitle}
+            className={style.logo_string}
           />
-          <h1 className={style.title}>ALOHA</h1>
         </div>
       </Link>
       <div className={style.nav}>

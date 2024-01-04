@@ -1,0 +1,13 @@
+.container {
+    margin: 0 20px 0;
+    width: 360px;
+    height: 350px;
+
+    cursor: default;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        display: none;
+    }
+}
