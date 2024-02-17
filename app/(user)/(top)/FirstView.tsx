@@ -3,6 +3,7 @@ import Image from 'next/image';
 import firstViewPic from './src/first_view.jpg';
 import firstViewSPPic from './src/first_view_sp.jpg';
 import firstViewCopy from './src/first_view_copy.svg';
+import NewsCard from './NewsCard';
 
 const FirstView = () => {
 	return (
@@ -33,11 +34,11 @@ const FirstView = () => {
 			<div className={style.triangle2}></div> */}
 
 			{/* カード */}
-			{/* <NewsCard
+			<NewsCard
 				message1='【最新イベント情報】'
 				message2='一泊二日 勉強合宿開催決定'
 				message3='参加申し込みはこちら ▶︎'
-			/> */}
+			/>
 
 			{/* <h2 className={style.copy1}>沖縄から</h2>
 			<h2 className={style.copy2}>東大を</h2>
