@@ -35,8 +35,8 @@ const FirstView = () => {
 
 			{/* カード */}
 			<NewsCard
-				message1='【オンラインセミナー】'
-				message2='親子で学ぶ！受験勉強のスタートアップガイド'
+				message1='【新プロジェクト】'
+				message2='個人版東大プロジェクト始動！'
 				message3='参加申し込みはこちら ▶︎'
 			/>
 

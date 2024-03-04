@@ -4,7 +4,7 @@
 	left: 20px;
 
 	height: 186px;
-	width: 465px;
+	width: 400px;
 	background-color: var(--color-white);
 	position: relative;
 
@@ -57,7 +57,7 @@
 		left: 30px;
 
 		height: 100px;
-		width: 250px;
+		width: 200px;
 		z-index: 100;
 	}
 
