@@ -19,6 +19,14 @@ export default function Main() {
     {
       image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
       alt: "東大生交流会の様子",
+      article_url: "/articles/personal-todai-project",
+      title: "個人版東大プロジェクト始動！",
+      summary: "沖縄から東京大学を目指す中高生を支援する「東大プロ...",
+      date: "2023/03/05",
+    },
+    {
+      image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
+      alt: "東大生交流会の様子",
       article_url: "/articles/meet-up",
       title: "東大生交流会@昭和薬科",
       summary: "2023年6月17日(土)に、昭和薬科大学附属高等学校・中...",
