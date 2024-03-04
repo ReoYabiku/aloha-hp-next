@@ -3,6 +3,7 @@ import OnlineInterview from './OnlineInterview';
 import VisitingLecture from './VisitingLecture';
 import MeetUp from './MeetUp';
 import StudyCamp from './StudyCamp';
+import PersonalTodaiProject from './PersonalTodaiProject';
 
 export default function Article({ params }: { params: { id: string } }) {
   switch (params.id) {
@@ -16,6 +17,8 @@ export default function Article({ params }: { params: { id: string } }) {
       return <MeetUp />
     case "study-camp":
       return <StudyCamp />
+    case "personal-todai-project":
+      return <PersonalTodaiProject />
     case "hoge":
       return <div>hogehoge</div>;
   }

@@ -83,6 +83,28 @@
     padding: 20px;
 }
 
+.table{
+    width: 100%;
+    border: none;
+    background-color: aliceblue;
+}
+
+.table th {
+    padding: 10px 0;
+    width: 20%;
+    text-align: center;
+    border: none;
+}
+
+.table td {
+    text-align: center;
+    border: none;
+}
+
+.table tr:nth-child(odd){
+    background-color: #eee
+}
+
 @media screen and (max-width: 480px) {
     .table_of_contents, .author, .right_nav {
         display: none;
