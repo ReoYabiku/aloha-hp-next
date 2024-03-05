@@ -20,8 +20,8 @@ export default function Articles({articles}: ArticlesProps) {
                             articles.slice(i*articlesPerRow,(i+1)*articlesPerRow).map((article, id) => (
                                 <Article
                                     key={id}
-                                    image_url={article.image_url}
-                                    alt={article.alt}
+                                    image_url={article.image_url || "https://alohahp.s3.ap-northeast-1.amazonaws.com/logo/aloha_small.png"}
+                                    alt={article.alt || "学生団体ALOHAのロゴ"}
                                     article_url={article.article_url}
                                     title={article.title}
                                     summary={article.summary}

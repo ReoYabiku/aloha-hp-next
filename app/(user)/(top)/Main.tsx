@@ -17,6 +17,14 @@ export default function Main() {
 
   const articles: ArticleProps[] = [
     {
+      image_url: "",
+      alt: "",
+      article_url: "/articles/personal-todai-project",
+      title: "個人版東大プロジェクト始動！",
+      summary: "沖縄から東京大学を目指す中高生を支援する「東大プロ...",
+      date: "2023/03/05",
+    },
+    {
       image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
       alt: "東大生交流会の様子",
       article_url: "/articles/meet-up",
@@ -32,14 +40,14 @@ export default function Main() {
       summary: "2023年9月9日から10日の2日間に渡り、沖縄県奥武山にあ...",
       date: "2023/12/18",
     },
-    {
-      image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/articles/visiting-lecture1.jpg",
-      alt: "説明",
-      article_url: "/articles/visiting-lecture",
-      title: "出張講演会@昭和薬科",
-      summary: "2023年3月22日、沖縄県昭和薬科大学附属高校の生徒を対象...",
-      date: "2023/12/18",
-    },
+    // {
+    //   image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/articles/visiting-lecture1.jpg",
+    //   alt: "説明",
+    //   article_url: "/articles/visiting-lecture",
+    //   title: "出張講演会@昭和薬科",
+    //   summary: "2023年3月22日、沖縄県昭和薬科大学附属高校の生徒を対象...",
+    //   date: "2023/12/18",
+    // },
   ];
 
   const largeBlocks: LargeBlockProps[] = [
