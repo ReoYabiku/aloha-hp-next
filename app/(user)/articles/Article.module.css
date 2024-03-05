@@ -105,6 +105,25 @@
     background-color: #eee
 }
 
+.button_wrapper {
+    height: 80px;
+    text-align: center;
+}
+
+.button {
+    margin: 15px auto 15px;
+    border: none;
+    height: 50px;
+    width: 300px;
+    border-radius: 25px;
+    font-size: 15px;
+    color: var(--color-gray);
+    box-shadow: 5px 5px var(--color-gray);
+    background-color: var(--color-pink);
+
+    cursor: pointer;
+}
+
 @media screen and (max-width: 480px) {
     .table_of_contents, .author, .right_nav {
         display: none;
