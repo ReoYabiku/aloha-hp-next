@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import style from './Article.module.css';
+import { useRouter } from 'next/navigation';
 
 export default function PersonalTodaiProject() {
   const [tableOfContentsClass, setTableOfContentsClass] = useState(style.table_of_contents)
+  const router = useRouter();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -39,7 +41,11 @@ export default function PersonalTodaiProject() {
             <p>沖縄から東京大学を目指す中高生を支援する<strong>「東大プロジェクト」</strong>に、このたび<strong>「個人版」</strong>が新設されることになりました！</p>
             <p>これまで、学校版東大プロジェクトとして県内の２校と提携し、さまざまなイベントや面談などを通して生徒のみなさんをサポートして参りました。</p>
             <p>そして今回、学校の枠を超えてより多くの中高生を応援したいという想いから、学校を介さない<strong>「個人版東大プロジェクト」</strong>を新設することになりました。</p>
-            <p><strong>入会申し込みフォーム</strong>は<a href="https://forms.gle/XSjMNUa2U3fsGkBz6" style={{"color": "blue"}}><strong>こちら</strong></a></p>
+            <div className={style.button_wrapper}>
+              <button onClick={() => router.push("https://forms.gle/XSjMNUa2U3fsGkBz6")} className={style.button}>
+                <strong>入会申し込みフォームはこちら</strong>
+              </button>
+            </div>
             <h3 className={style.text_headline}>プロジェクト詳細</h3>
             <table className={style.table}>
               <tbody>
@@ -66,7 +72,11 @@ export default function PersonalTodaiProject() {
               <li><strong>入会諸費用を振り込む</strong></li>
               <li><strong>Google Classroomへ参加する(生徒様のみ)</strong></li>
             </ol>
-            <p>入会申し込みフォームは<a href="https://forms.gle/XSjMNUa2U3fsGkBz6" style={{"color": "blue"}}><strong>こちら</strong></a></p>
+            <div className={style.button_wrapper}>
+              <button onClick={() => router.push("https://forms.gle/XSjMNUa2U3fsGkBz6")} className={style.button}>
+                <strong>入会申し込みフォームはこちら</strong>
+              </button>
+            </div>
             <p>お問い合わせは公式LINEよりお気軽にご連絡ください。</p>
             <p>担当：仲本</p>
           </div>
