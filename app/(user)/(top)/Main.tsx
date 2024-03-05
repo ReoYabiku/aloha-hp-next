@@ -17,8 +17,8 @@ export default function Main() {
 
   const articles: ArticleProps[] = [
     {
-      image_url: "https://alohahp.s3.ap-northeast-1.amazonaws.com/activities/meetup.jpg",
-      alt: "東大生交流会の様子",
+      image_url: "",
+      alt: "",
       article_url: "/articles/personal-todai-project",
       title: "個人版東大プロジェクト始動！",
       summary: "沖縄から東京大学を目指す中高生を支援する「東大プロ...",
