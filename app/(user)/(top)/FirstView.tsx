@@ -1,6 +1,7 @@
 import style from './FirstView.module.css';
 import Image from 'next/image';
 import firstViewCopy from './src/first_view_copy.svg';
+import firstViewSP from './src/first_view_sp.jpg';
 import NewsCard from './NewsCard';
 
 const FirstView = () => {
@@ -16,9 +17,8 @@ const FirstView = () => {
 			/>
 			<Image
 				className={style.imageSP}
-				src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/top/first_view_sp.jpg"}
-				fill={true}
-				// height={627}
+				src={firstViewSP}
+				height={627}
 				priority
 				alt='安田講堂'
 			/>
