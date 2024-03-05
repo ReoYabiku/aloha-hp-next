@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from 'react';
-import style from './Article.module.css';
+import style from '../Article.module.css';
 import Image from 'next/image';
 
 export default function StudyCamp() {
