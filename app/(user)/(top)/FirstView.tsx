@@ -11,6 +11,7 @@ const FirstView = () => {
 				src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/top/first_view.jpg"}
 				// height={590}
 				fill={true}
+				priority
 				alt="安田講堂"
 			/>
 			<Image
@@ -18,6 +19,7 @@ const FirstView = () => {
 				src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/top/first_view_sp.jpg"}
 				fill={true}
 				// height={627}
+				priority
 				alt='安田講堂'
 			/>
 			<Image
