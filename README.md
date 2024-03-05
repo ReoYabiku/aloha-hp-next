@@ -1,5 +1,11 @@
 # 学生団体ALOHA　HP
 
+## sitemapの更新
+`postbuild`に`next-sitemap`が登録されているので、`build`を実行することでsitemapを更新することができます。
+```shell
+$ npm run build
+```
+
 ## 開発の始め方
 1. リポジトリをクローンする
 ```shell
