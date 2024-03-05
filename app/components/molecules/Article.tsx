@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useRouter } from 'next/navigation';
 import style from './Article.module.css';
+import { useEffect } from 'react';
 
 export type ArticleProps = {
   image_url: string,
@@ -15,6 +16,9 @@ export type ArticleProps = {
 
 export default function Article({ image_url, alt, title, article_url, summary, date }: ArticleProps) {
   const router = useRouter();
+
+  useEffect(() => router.prefetch(article_url));
+
   return (
     <div className={style.container} onClick={() => router.push(article_url)}>
       <Image
