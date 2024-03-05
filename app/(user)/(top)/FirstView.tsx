@@ -1,7 +1,5 @@
 import style from './FirstView.module.css';
 import Image from 'next/image';
-import firstViewPic from './src/first_view.jpg';
-import firstViewSPPic from './src/first_view_sp.jpg';
 import firstViewCopy from './src/first_view_copy.svg';
 import NewsCard from './NewsCard';
 
@@ -10,15 +8,16 @@ const FirstView = () => {
 		<section className={style.first_view}>
 			<Image
 				className={style.image}
-				src={firstViewPic}
-				height={590}
+				src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/top/first_view.jpg"}
+				// height={590}
+				fill={true}
 				alt="安田講堂"
 			/>
 			<Image
 				className={style.imageSP}
-				src={firstViewSPPic}
-				// fill={true}
-				height={627}
+				src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/top/first_view_sp.jpg"}
+				fill={true}
+				// height={627}
 				alt='安田講堂'
 			/>
 			<Image
