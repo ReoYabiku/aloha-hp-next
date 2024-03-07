@@ -6,6 +6,7 @@ import { Inter } from 'next/font/google'
 import Footer from './(footer)/Footer'
 import CopyRight from './(footer)/CopyRight'
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,6 +32,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <CopyRight />
+          <SpeedInsights />
         </div>
         <Analytics />
       </body>
