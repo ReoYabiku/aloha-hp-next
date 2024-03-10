@@ -85,7 +85,7 @@ export default function Main() {
       name: "公式X",
     },
     {
-      url: "#",
+      url: "/articles/personal-todai-project",
       icon: <MeetingRoomIcon />,
       name: "募集中のイベント",
     },
