@@ -12,6 +12,7 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import Articles from '../../components/organisms/Articles';
+import Image from 'next/image';
 
 export default function Main() {
 
@@ -128,7 +129,24 @@ export default function Main() {
               }
           </div>
         </div>
-        
+      </section>
+      <section className={style.todaiProject}>
+        <h2 className={style.head}>東大プロジェクト</h2>
+        <div className={style.todaiProjectContent}>
+          <div className={style.todaiProjectImage}>
+            <Image
+              src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/black.png"}
+              alt='東大プロジェクトのポスター'
+              height={400}
+              width={400}
+              style={{display: "block", margin: "auto"}}
+              className={style.todaiProjectPoster}
+            />
+          </div>
+          <div className={style.todaiProjectInfo}>
+            <p>東大プロジェクトについての説明。昨年実施してきた内容や、今年度取り組むことなどを説明する。指定のフォントとは厳密には異なりますが、このフォントなら簡単に導入できそうです。こっちもかっこよくないですか？</p>
+          </div>
+        </div>
       </section>
     </>
   );
