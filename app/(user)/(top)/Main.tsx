@@ -75,7 +75,7 @@ export default function Main() {
       name: "資料一覧",
     },
     {
-      url: "#",
+      url: "/contact",
       icon: <PhoneIcon />,
       name: "お問い合わせ",
     },
