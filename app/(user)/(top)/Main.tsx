@@ -13,6 +13,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import Articles from '../../components/organisms/Articles';
 import Image from 'next/image';
+import TodaiPJPoster from './src/todai_pj_poster.jpg';
 
 export default function Main() {
 
@@ -131,20 +132,22 @@ export default function Main() {
         </div>
       </section>
       <section className={style.todaiProject}>
-        <h2 className={style.head}>東大プロジェクト</h2>
+        <h2 className={style.head}>学校版東大プロジェクト</h2>
         <div className={style.todaiProjectContent}>
           <div className={style.todaiProjectImage}>
             <Image
-              src={"https://alohahp.s3.ap-northeast-1.amazonaws.com/documents/black.png"}
+              src={TodaiPJPoster}
               alt='東大プロジェクトのポスター'
-              height={400}
-              width={400}
+              width={300}
+              objectFit='fill'
               style={{display: "block", margin: "auto"}}
               className={style.todaiProjectPoster}
             />
           </div>
           <div className={style.todaiProjectInfo}>
-            <p>東大プロジェクトについての説明。昨年実施してきた内容や、今年度取り組むことなどを説明する。指定のフォントとは厳密には異なりますが、このフォントなら簡単に導入できそうです。こっちもかっこよくないですか？</p>
+            <p>　沖縄から東京大学を志望する生徒を応援すべく「<strong>東大プロジェクト</strong>」を始動しました！</p>
+            <p>　現在(2023年度)、<strong>開邦高校</strong>と<strong>昭和薬科大学附属高校</strong>の2校と連携し、「東大生交流会」「勉強合宿」「出張模擬講義」「東大生面談」などの多くのプログラムを実行しております。</p>
+            <p>　入会は提携学校を通すことが必須条件となっております。提携学校に所属していない場合は「<strong><a href="/articles/personal-todai-project">個人版東大プロジェクト</a></strong>」をご参照ください。</p>
           </div>
         </div>
       </section>
