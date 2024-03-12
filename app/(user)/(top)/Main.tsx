@@ -12,6 +12,8 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import Articles from '../../components/organisms/Articles';
+import Image from 'next/image';
+import TodaiPJPoster from './src/todai_pj_poster.jpg';
 
 export default function Main() {
 
@@ -75,7 +77,7 @@ export default function Main() {
       name: "資料一覧",
     },
     {
-      url: "#",
+      url: "/contact",
       icon: <PhoneIcon />,
       name: "お問い合わせ",
     },
@@ -85,7 +87,7 @@ export default function Main() {
       name: "公式X",
     },
     {
-      url: "#",
+      url: "/articles/personal-todai-project",
       icon: <MeetingRoomIcon />,
       name: "募集中のイベント",
     },
@@ -128,7 +130,26 @@ export default function Main() {
               }
           </div>
         </div>
-        
+      </section>
+      <section className={style.todaiProject}>
+        <h2 className={style.head}>学校版東大プロジェクト</h2>
+        <div className={style.todaiProjectContent}>
+          <div className={style.todaiProjectImage}>
+            <Image
+              src={TodaiPJPoster}
+              alt='東大プロジェクトのポスター'
+              width={300}
+              objectFit='fill'
+              style={{display: "block", margin: "auto"}}
+              className={style.todaiProjectPoster}
+            />
+          </div>
+          <div className={style.todaiProjectInfo}>
+            <p>　沖縄から東京大学を志望する生徒を応援すべく「<strong>東大プロジェクト</strong>」を始動しました！</p>
+            <p>　現在(2023年度)、<strong>開邦高校</strong>と<strong>昭和薬科大学附属高校</strong>の2校と連携し、「東大生交流会」「勉強合宿」「出張模擬講義」「東大生面談」などの多くのプログラムを実行しております。</p>
+            <p>　入会は提携学校を通すことが必須条件となっております。提携学校に所属していない場合は「<strong><a href="/articles/personal-todai-project">個人版東大プロジェクト</a></strong>」をご参照ください。</p>
+          </div>
+        </div>
       </section>
     </>
   );

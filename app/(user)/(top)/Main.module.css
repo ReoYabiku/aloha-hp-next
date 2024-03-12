@@ -40,6 +40,28 @@
 	margin: auto 10%;
 }
 
+.todaiProject {
+	background-color: var(--color-pale-main);
+	padding-top: 20px;
+	padding-bottom: 50px;
+}
+
+.todaiProjectContent {
+	display: flex;
+	justify-content: space-between;
+	width: 1000px;
+	margin: auto calc((100% - 1000px)/2);
+}
+
+.todaiProjectImage {
+	margin-left: 150px;
+}
+
+.todaiProjectInfo {
+	width: 40%;
+	margin: 0 50px;
+}
+
 @media screen and (max-width: 700px) {
 	.onlyPC {
 		display: none;
@@ -58,5 +80,27 @@
 	.about {
 		width: 350px;
 		margin: auto calc((100% - 350px)/2);
+	}
+
+	.todaiProjectContent {
+		display: flex;
+		justify-content: space-between;
+		width: 400px;
+		margin: auto calc((100% - 400px)/2);
+		font-size: 10px;
+	}
+
+	.todaiProjectImage {
+		margin-left: 30px;
+	}
+
+	.todaiProjectPoster {
+		height: 270px;
+		width: 180px;
+		object-fit: contain;
+	}
+
+	.todaiProjectInfo {
+		margin: 0 20px;
 	}
 }

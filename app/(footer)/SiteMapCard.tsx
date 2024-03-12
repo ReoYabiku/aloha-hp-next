@@ -12,7 +12,7 @@ export default function SiteMapCard() {
     },
     {
       name: "お問い合わせ",
-      href: "#",
+      href: "/contact",
     },
     {
       name: "プライパシーポリシー",
